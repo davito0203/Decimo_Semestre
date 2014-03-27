@@ -1,0 +1,61 @@
+//NET "" LOC = B8; //Clk
+
+#SWITCH
+//NET "" LOC = G18; //SW0
+//NET "" LOC = H18; //SW1
+//NET "" LOC = K18; //SW2
+//NET "" LOC = K17; //SW3
+//NET "" LOC = L14; //SW4
+//NET "" LOC = L13; //SW5
+//NET "" LOC = N17; //SW6
+//NET "" LOC = R17; //SW7
+
+# JA
+//NET "" LOC = L15; //JA1
+//NET "" LOC = K13; //JA7
+//NET "" LOC = K12; //JA2
+//NET "" LOC = L16; //JA8
+//NET "" LOC = L17; //JA3
+//NET "" LOC = M14; //JA9
+//NET "" LOC = M15; //JA4
+//NET "" LOC = M16; //JA10
+
+# JB
+//NET "" LOC = M13; //JB1
+//NET "" LOC = P17; //JB7
+//NET "" LOC = R18; //JB2
+//NET "" LOC = R16; //JB8
+//NET "" LOC = R15; //JB3
+//NET "" LOC = T18; //JB9
+//NET "" LOC = T17; //JB4
+//NET "" LOC = U18; //JB10
+
+# JC
+//NET "" LOC = G15; //JC1
+//NET "" LOC = H15; //JC7
+//NET "" LOC = J16; //JC2
+//NET "" LOC = F14; //JC8  
+//NET "" LOC = G13; //JC3  
+//NET "" LOC = G16;	//JC9  
+//NET "" LOC = G13; //JC4
+//NET "" LOC = J12; //JC10
+
+# JD
+//NET "" LOC = J13; //JD1
+//NET "" LOC = K14; //JD7*
+//NET "" LOC = M18; //JD2
+//NET "" LOC = K15; //JD8*
+//NET "" LOC = N18; //JD3
+//NET "" LOC = J15; //JD9*
+//NET "" LOC = P18; //JD4
+//NET "" LOC = J14; //JD10*
+
+# LEDs
+//NET "" LOC = P4; //LD7
+//NET "" LOC = E4; //LD6
+//NET "" LOC = P16; //LD5
+//NET "" LOC = E16; //LD4
+//NET "" LOC = K14; //LD3*
+//NET "" LOC = K15; //LD2*
+//NET "" LOC = J15; //LD1*
+//NET "" LOC = J14; //LD0*

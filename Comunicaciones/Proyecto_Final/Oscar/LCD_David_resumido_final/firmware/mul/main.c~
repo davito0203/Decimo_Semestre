@@ -1,0 +1,35 @@
+#include "soc-hw.h"
+ 
+int main(int argc, char **argv)
+{
+ 
+	uint32_t  mul1, mul2, resultado, i;
+	uint8_t resultado_char;
+	
+	
+ 
+	resultado = 0;	
+	i = 0;
+ 
+	//uart_putstr("Ingrese el numero uno \r\n");
+	//a = uart_getchar();
+	//uart_putstr("Ingrese el numero dos \r\n");
+	//b = uart_getchar();
+ 
+	//a = a - 48;
+	//b = b - 48;
+	mul1= 1;
+	mul2= 7;
+ 
+	resultado=mul1*mul2;
+ 
+	resultado = resultado + 48;
+	resultado_char = (char) resultado;
+ 
+	uart_putstr("El resultado es \r\n");
+	uart_putchar(resultado_char);
+ 
+	return 0;
+ 
+}
+

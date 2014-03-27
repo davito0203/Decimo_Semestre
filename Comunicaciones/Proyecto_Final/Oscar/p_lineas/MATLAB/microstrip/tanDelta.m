@@ -1,0 +1,29 @@
+function [tandelta] = tanDelta(alfa,er)
+
+alfad=zeros(631,1);
+ereff=zeros(631,1);
+q=zeros(631,1);
+tandelta=zeros(631,1);
+%er=4.3;
+
+load datos.txt
+frec = datos(:,1);
+c=2.9979e8;
+h=1.5e-3;
+w=4e-3;
+t=50e-6;
+
+alfad=alfa-alfaC(er);
+
+for k=1:631
+ereff(k)=(er(k)+1)/2+(er(k)-1)/(2*sqrt(1+12*h/w));
+end
+
+for m=1:631
+q(m)=(ereff(m)-1)/(er(m)-1);
+end
+
+for n=1:631
+tandelta(n)= (alfad(n)*c)/(pi*q(n)*frec(n)*ereff(n));
+end
+

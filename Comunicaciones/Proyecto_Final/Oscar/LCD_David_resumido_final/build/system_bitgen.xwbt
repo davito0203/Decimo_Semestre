@@ -1,0 +1,7 @@
+INFILE=/home/oscar/LM32_designs/LCD_David_3/build/system-routed.ncd
+OUTFILE=/home/oscar/LM32_designs/LCD_David_3/build/system.bit
+FAMILY=Spartan3E
+PART=xc3s1200e-4fg320
+WORKINGDIR=/home/oscar/LM32_designs/LCD_David_3/build
+LICENSE=WebPack
+USER_INFO=210697229_0_0_912

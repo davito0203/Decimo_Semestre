@@ -1,0 +1,32 @@
+/**
+ *Blinker led
+ *
+ *
+ */
+#include "soc-hw.h"
+
+/* prototypes */
+
+
+int main(int argc, char **argv,int clk)
+{
+
+input clk;
+output reg clk3;
+reg [30:0] cont;
+
+always@(posedge clk)
+
+begin
+    if(cont < 'd2500000)//velocidad de la barra
+    cont = cont + 1'b1;
+    else 
+      begin
+      clk3 = ~clk3;
+      cont = 0; 
+      end 
+end
+
+	
+}
+

@@ -1,0 +1,34 @@
+# ==== Clock inputs (CLK) ====
+NET "clk" LOC = "B8";
+#NET "clk" PERIOD = 20 HIGH 50%;
+//NET  led1  LOC = "P4";
+NET  rst  LOC = "G18";//SW0
+
+
+
+#LEDs tecla pulsada
+NET "En_S_Us" LOC = P4; //LD7
+NET "LEDs_ON" LOC = E4; //LD6
+NET "Melodia_ON" LOC = P16; //LD5
+NET "En_Mem" LOC = E16; //LD4
+NET "Rst_Mem" LOC = K14; //LD3*
+NET "Estado_LCD[2]" LOC = K15; //LD2*
+NET "Estado_LCD[1]" LOC = J15; //LD1*
+NET "Estado_LCD[0]" LOC = J14; //LD0*
+
+NET "Tecla[0]" LOC = H18; //SW1
+NET "Tecla[1]" LOC = K18; //SW2
+NET "Tecla[2]" LOC = K17; //SW3
+NET "Tecla[3]" LOC = L14; //SW4
+NET "Tecla[4]" LOC = L13; //SW5
+NET "Fin_Cancion" LOC = R17; //SW7
+
+#SWITCH
+//NET "Song" LOC = G18; //SW0
+//NET "En_Mem" LOC = H18; //SW1
+//NET "reset" LOC = K18; //SW2
+//NET "" LOC = K17; //SW3
+//NET "" LOC = L14; //SW4
+//NET "Song[0]" LOC = L13; //SW5
+//NET "Song[1]" LOC = N17; //SW6
+//NET "Song[2]" LOC = R17; //SW7

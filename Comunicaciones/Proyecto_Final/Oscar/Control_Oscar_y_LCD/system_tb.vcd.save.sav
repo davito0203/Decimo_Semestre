@@ -1,0 +1,15 @@
+[timestart] 0
+[size] 1000 600
+[pos] -1 -1
+*0.000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] system_tb.
+[treeopen] system_tb.dut.
+@22
+system_tb.dut.gpio0.gpio_dir[7:0]
+system_tb.dut.gpio0.gpio_i[7:0]
+system_tb.dut.gpio0.gpio_io[7:0]
+system_tb.dut.gpio0.gpio_o[7:0]
+@23
+system_tb.dut.gpio0.wb_adr_i[31:0]
+system_tb.dut.gpio0.wb_dat_i[31:0]
+system_tb.dut.gpio0.wb_dat_o[31:0]

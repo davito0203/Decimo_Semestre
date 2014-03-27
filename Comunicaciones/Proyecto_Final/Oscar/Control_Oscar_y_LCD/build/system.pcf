@@ -1,0 +1,24 @@
+//! **************************************************************************
+// Written by: Map O.87xd on Thu May 23 04:04:21 2013
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "B8" LEVEL 1;
+COMP "En_S_Us" LOCATE = SITE "P4" LEVEL 1;
+COMP "rst" LOCATE = SITE "G18" LEVEL 1;
+COMP "Rst_Mem" LOCATE = SITE "K14" LEVEL 1;
+COMP "Melodia_ON" LOCATE = SITE "P16" LEVEL 1;
+COMP "Tecla<0>" LOCATE = SITE "H18" LEVEL 1;
+COMP "Tecla<1>" LOCATE = SITE "K18" LEVEL 1;
+COMP "Tecla<2>" LOCATE = SITE "K17" LEVEL 1;
+COMP "Tecla<3>" LOCATE = SITE "L14" LEVEL 1;
+COMP "Tecla<4>" LOCATE = SITE "L13" LEVEL 1;
+COMP "En_Mem" LOCATE = SITE "E16" LEVEL 1;
+COMP "Fin_Cancion" LOCATE = SITE "R17" LEVEL 1;
+COMP "Estado_LCD<0>" LOCATE = SITE "J14" LEVEL 1;
+COMP "Estado_LCD<1>" LOCATE = SITE "J15" LEVEL 1;
+COMP "Estado_LCD<2>" LOCATE = SITE "K15" LEVEL 1;
+COMP "LEDs_ON" LOCATE = SITE "E4" LEVEL 1;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+
