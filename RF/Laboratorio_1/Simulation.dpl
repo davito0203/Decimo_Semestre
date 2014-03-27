@@ -1,0 +1,33 @@
+<Qucs Schematic 0.0.16>
+<Properties>
+  <View=-250,-234,1169,740,1,250,54>
+  <Grid=10,10,0>
+  <DataSet=Simulation.dat>
+  <DataDisplay=Simulation.sch>
+  <OpenDisplay=1>
+  <Script=Simulation.m>
+  <RunScript=0>
+  <showFrame=0>
+  <FrameText0=Title>
+  <FrameText1=Drawn By:>
+  <FrameText2=Date:>
+  <FrameText3=Revision:>
+</Properties>
+<Symbol>
+</Symbol>
+<Components>
+</Components>
+<Wires>
+</Wires>
+<Diagrams>
+  <Rect 296 377 606 561 3 #c0c0c0 1 00 1 0 500000 6e+06 1 0 0.02 0.12 1 -1 0.2 1 315 0 225 "" "" "">
+	<"Pr1.v" #0000ff 0 3 0 0 0>
+	<"Pr2.v" #ff0000 0 3 0 0 0>
+  </Rect>
+  <Tab -210 250 387 204 3 #c0c0c0 1 00 1 0 1 1 1 0 1 1 1 0 1 5000 315 0 225 "" "" "">
+	<"Pr1.v" #0000ff 0 3 1 0 0>
+	<"Pr2.v" #0000ff 0 3 1 0 0>
+  </Tab>
+</Diagrams>
+<Paintings>
+</Paintings>
