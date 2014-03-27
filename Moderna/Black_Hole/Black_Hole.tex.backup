@@ -1,0 +1,184 @@
+\documentclass{beamer}
+\usepackage[utf8x]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{times}
+\usepackage{cite}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{url}
+\usepackage{alltt}
+\usepackage{amsthm}
+\usepackage{color}
+\usepackage{CJK}
+\usepackage{enumerate}
+\usepackage{listings}
+\usepackage{textpos}
+\usepackage{fancybox}
+\usepackage{eurosym}
+\usepackage{graphics,graphicx,color,colortbl}
+\usepackage{subfigure}
+\usepackage{listings}
+\usepackage{algorithm}
+\usetheme{Berlin}
+\useoutertheme{shadow}
+\useoutertheme{split}
+\useinnertheme{rounded}
+\useoutertheme{infolines}
+\usecolortheme{orchid}
+\usecolortheme{whale}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{bgcolor}{fg=black,bg=GhostWhite}
+\setbeamercovered{transparent}
+
+\title[Black Hole]{Exposición Física Moderna}
+\subtitle{Masa Inercial de Fotón y Agujeros Negros}
+\author[David Martínez]{David Ricardo Martínez Hernández}
+\institute[UNAL]{Facultad del Ingeniería\\ Departamento de Eléctrica y Electrónica \\ Universidad Nacional de Colombia}
+\date[04/24/13]{$24$ de abril de $2013$}
+
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+ \frametitle{Tabla de contenidos}
+ \tableofcontents
+\end{frame}
+
+\section{}
+\begin{frame}
+ \frametitle{}
+ \begin{itemize}
+  \item Un fotón tiene una energía igual a $E=h \nu$
+  \item La Teoría de Relatividad permite demostrar que si se acepta que los fotones se propagan a la velocidad de la luz, entonces tienen masa propia nula, masa relativista y cantidad de movimiento no nulos, y el módulo de su velocidad no puede ser modificado.
+  \item Por definición la masa relativista de un fotón esta dada por $m = \frac{h \nu}{c^2}$
+ \end{itemize}
+\end{frame}
+
+
+\section[Origen del Universo]{El origen del Universo}
+\begin{frame}
+ \frametitle{El origen del Universo}
+ \begin{itemize}
+  \item A algunos como \textbf{Aristóteles}, no les agradaba la idea de que el universo hubiera tenido un comienzo, consideraban que eso implicaría una intervención divina. Algo eterno resultaba más perfecto que algo que tuvo que ser creado.
+  \item La segunda ley de la termodinámica del físico alemán \textbf{Ludwig Boltzmann} señaló que el volumen total de desorden aumenta con el tiempo.
+  \item en 1929 con el descubrimiento de la expansión del universo por \textbf{Edwin Hubble} alteró por completo el debate sobre su origen.
+  \item \textit{``El universo es como es ahora porque era como era entonces. Pero la ciencia no podría explicar porque fue como fue justo después del Big Bang''} \textbf{Stephen Hawking}.
+ \end{itemize}
+\end{frame}
+\begin{frame}
+ \begin{itemize}
+  \item Surgieron diversas ideas que tuvo que existir una singularidad del Big Bang , un comienzo del tiempo:
+    \begin{itemize}
+      \item Una fue la llamada teoría del estado estable.
+      \item Una que evitaría la singularidad del Big Bang fue formulada en 1963 por \textbf{Evgenii Lifshitz} e \textbf{Isaac Khalatnikov}.
+    \end{itemize}
+  \item Los teoremas de la singularidad indican que en el comienzo de la presente fase de expansión del universo el espacio-tiempo estará muy distorsionado, con un pequeño radio de curvatura.
+  \item Para debatir el origen del universo es necesaria una teoría que combine la relatividad general con la mecánica cuántica.
+  \item La propuesta de \textbf{Richard Feynman}, según la cual la teoría cuántica puede ser formulada como una suma de historias.
+ \end{itemize}
+\end{frame}
+
+\section[La muerte de las estrellas]{La muerte de las estrellas}
+\begin{frame}
+\frametitle{La muerte de las estrellas}
+ \begin{itemize}
+  \item Las estrellas están constituidas por átomos. El calor es una manifestación macroscópica del movimiento de los átomos. Si la temperatura es muy alta se forma una mezcla de núcleos atómicos y de electrones libres.
+  \item En la plenitud de su vida, una estrella se mantiene en equilibrio gracias al balance muy preciso entre dos fuerzas que actúan sobre ella
+    \begin{itemize}
+     \item La fuerza de atracción gravitacional entre las diversas partes de la estrella. 
+     \item La fuerza de presión de la materia incandescente.
+    \end{itemize}
+  \item Si la temperatura en el centro de la estrella alcanza unos doscientos millones de grados, los núcleos de helio se fusionan entre sí y producen núcleos de oxígeno y carbono. Si aumenta aún más el carbono se trasmuta en oxígeno, neón, sodio y magnesío, y así sucesivamente.
+ \end{itemize}
+\end{frame}
+\begin{frame}
+ \begin{itemize}
+  \item Al envejecer, las estrellas arrojan al espacio una fracción importante de sus masas, con lo que enriquecen de gas el medio interestelar. De ese gas se forman nuevas estrellas.
+  \item No todas las estrellas viven y mueren de la misma manera; el parámetro fundamental que determina la evolución de una estrella es su masa. La masa de nuestro Sol es aproximadamente $2*10^{30}\ \ kg$.
+  \item Mientras más masiva es una estrella, menos tiempo brilla, porque consume su combustible nuclear mucho más rápidamente que una estrella poco masiva.
+ \end{itemize}
+\end{frame}
+
+\subsection[Enanas Blancas]{Enanas Blancas}
+\begin{frame}
+ \frametitle{Enanas Blancas}
+ \begin{itemize}
+  \item A principios de los años veinte, los astrónomos habían descubierto tres estrellas de muy baja luminosidad y de un color claramente blanco.
+  \item Una enana blanca se encuentran en la etapa final de su evolución.
+  \item la materia está tan comprimida que los núcleos atómicos se ``pegan'' entre sí, formando una especie de red cristalina, y los electrones se mueven libremente a través de esa configuración de núcleos, formando a su vez un ``gas de electrones''.
+  \item La enana blanca se vuelve ``enana roja'' y finalmente ``enana negra''.
+ \end{itemize}
+\end{frame}
+\begin{frame}
+ \begin{itemize}
+  \item En 1930, \textbf{Subrahmanyan Chandrasekhar} se dio cuenta que los electrones degenerados alcanzan velocidades cercanas a la de la luz. Encontró una relación entre la presión y la densidad de un gas de electrones degenerados.
+  \item La presión de los electrones degenerados sólo puede detener el colapso gravitacional de la estrella si la masa de ésta es menor que un valor crítico. Este valor crítico es el \textbf{límite de Chandrasekhar} que es 1.5 veces la masa del Sol.
+ \end{itemize}
+\end{frame}
+
+\subsection[Estrella de Neutrones]{Estrella de Neutrones}
+\begin{frame}
+ \frametitle{Estrella de Neutrones}
+ \begin{itemize}
+  \item Pocos meses después de la publicación del trabajo de \textbf{Chandrasekhar}, el gran físico soviético \textbf{Lev Landau} propuso que, cuando la densidad de la materia excede la de una enana blanca, los electrones se ven forzados a fusionarse con los protones.
+  \item En una estrella cuya masa excede el límite de \textbf{Chandrasekhar}, los electrones degenerados no pueden detener la compresión y se ven forzados a fusionarse con los protones, formando neutrones.
+  \item Una cucharada de la materia de estas estrellas pesa unos cien millones de toneladas.
+ \end{itemize}
+\end{frame}
+
+
+\section[Mecánica Cuántica]{La mecánica cuántica de los agujeros negros}
+\begin{frame}
+ \frametitle{La mecánica cuántica de los agujeros negros}
+ \begin{itemize}
+  \item En los primeros treinta años de este siglo surgieron tres teorías que alteraron radicalmente la visión que el hombre tenía de la física y de la propia realidad:
+    \begin{itemize}
+     \item La teoría especial de la relatividad (1905).
+     \item La teoría general de la relatividad (1915).
+     \item La teoría de la mecánica cuántica (aproximadamente en 1926).
+    \end{itemize}
+  \item Admitieron tanto la relatividad especial como la mecánica cuántica porque describían efectos que podían ser observados directamente.
+  \item  La relatividad general fue en gran parte ignorada porque matemáticamente resultaba demasiado compleja, no era susceptible de comprobación en el laboratorio. De ese modo, la relatividad general permaneció en el limbo casi cincuenta años 
+ \end{itemize}
+\end{frame}
+\begin{frame}
+ \frametitle{Surgimiento de un Agujero Negro}
+ \begin{itemize}
+  \item Durante la mayor parte de su existencia una estrella generará calor en su núcleo, transformando hidrógeno en helio. La masa de la estrella tiene 5 veces la masa del Sol.
+  \item La energía liberada creará presión suficiente para que la estrella soporte su propia gravedad. lugar a un objeto de un radio cinco veces mayor que el del Sol.
+  \item La velocidad de escape de una estrella semejante seria de unos 1000 kilómetros por segundo
+  \item Cuando la estrella haya consumido su combustible nuclear, nada quedara para mantener la presión exterior y el astro comenzara a contraerse por obra de su propia gravedad.
+ \end{itemize}
+\end{frame}
+\begin{frame}
+ \begin{itemize}
+  \item Al encogerse la estrella, el campo gravitatorio de su superficie será mas fuerte y la velocidad de escape ascenderá a los trescientos mil kilómetros por segundo, la velocidad de la luz.
+  \item El agujero negro negro es una región del espacio-tiempo de la que no es posible escapar hacia el infinito.
+  \item La frontera del agujero negro recibe el nombre de horizonte de sucesos. Corresponde a una onda luminosa de choque procedente de la estrella que no consigue partir al infinito y permanece detenida en el radio de Shwarzschild: $ 2 \frac{GM}{c}$.
+  \item si dos agujeros negros chocan y se funden en uno solo, el área del horizonte de sucesos alrededor del agujero negro resultante es superior a la suma de las áreas de los horizontes de sucesos de los agujeros negros originales. 
+ \end{itemize}
+\end{frame}
+
+\section{Referencias}
+\begin{frame}[allowframebreacks]
+\frametitle{Referencias}
+\begin{thebibliography}{10}
+  \beamertemplatebookbibitems
+  \bibitem{hawking1} Hacyan, Shahen.
+    \newblock Los Hoyos engros y La curvatura del Espacio-Tiempo.
+    \newblock \emph{Fondo de cultura económica}, Segunda Edición, 1998.
+  \beamertemplatebookbibitems
+  \bibitem{hawking1} Hawking, Stephen.
+    \newblock Agujeros Negros y Pequeños Universos  otros Ensayos.
+    \newblock \emph{chile.ciencia.misc}, 2002.
+  \beamertemplatebookbibitems
+  \bibitem{hawking2} Hawking, Stephen.
+    \newblock Historia del tiempo del Big Bang a los Agujeros Negros.
+    \newblock \emph{chile.ciencia.misc}, 2002.
+  \beamertemplatearticlebibitems
+  \bibitem{page1} Sitio Web: \url{}, visitado el sábado 11 de agosto.
+\end{thebibliography}
+\end{frame}
+\end{document}

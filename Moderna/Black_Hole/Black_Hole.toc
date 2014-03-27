@@ -1,0 +1,9 @@
+\beamer@endinputifotherversion {3.10pt}
+\select@language {spanish}
+\beamer@sectionintoc {1}{Masa Inercial del fot\IeC {\'o}n}{3}{0}{1}
+\beamer@sectionintoc {2}{El origen del Universo}{4}{0}{2}
+\beamer@sectionintoc {3}{La muerte de las estrellas}{6}{0}{3}
+\beamer@subsectionintoc {3}{1}{Enanas Blancas}{8}{0}{3}
+\beamer@subsectionintoc {3}{2}{Estrella de Neutrones}{10}{0}{3}
+\beamer@sectionintoc {4}{La mec\IeC {\'a}nica cu\IeC {\'a}ntica de los agujeros negros}{11}{0}{4}
+\beamer@sectionintoc {5}{Referencias}{14}{0}{5}

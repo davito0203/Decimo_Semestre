@@ -1,0 +1,232 @@
+\documentclass[11pt,graphicx,caption,rotating]{article}
+\textheight=24cm
+\textwidth=18cm
+\topmargin=-2cm
+\oddsidemargin=0cm
+\usepackage[utf8x]{inputenc}
+\usepackage[activeacute,spanish]{babel}
+\usepackage{amssymb,amsfonts}
+\usepackage[tbtags]{amsmath}
+\usepackage{pict2e}
+\usepackage{float}
+\usepackage[all]{xy}
+\usepackage{graphics,graphicx,color,colortbl}
+\usepackage{times}
+\usepackage{subfigure}
+\usepackage{wrapfig}
+\usepackage{multicol}
+\usepackage{cite}
+\usepackage{url}
+\usepackage[tbtags]{amsmath}
+\usepackage{amsmath,amssymb,amsfonts,amsbsy}
+\usepackage{bm}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage[centerlast, small]{caption}
+\usepackage[colorlinks=true, citecolor=blue, linkcolor=blue, urlcolor=blue,breaklinks=true]{hyperref}
+
+{\huge \title{Taller N° 3 de Física Moderna}}
+\author{David Ricardo Martínez Hernández Código: $261931$}
+
+\begin{document}
+\date{}
+\maketitle
+
+\section{Ley de equipartición de la energía}
+\noindent
+De acuerdo a la ecuación descrita por serway pagina 601
+\begin{equation}
+ F = \frac{{m_0 }}{d}N\overline {v_x ^2 } 
+\label{ecu1}
+\end{equation}
+\noindent
+se considera ahora otra variable macroscópica la temperatura T del gas. Se puede obtener información sobre el significado de la temperatura por la ecuación (\ref{ecu1}) de la forma
+\begin{eqnarray}
+ PV & = & \frac{2}{3}N \left( {m_0 N\overline {v^2 } } \right) \nonumber \\
+ PV & = & Nk_B T \nonumber \\
+ T & = & \frac{2}{3 k_B}\left( {\frac{1}{2} m_0 N\overline {v^2 } } \right)\label{ecu2}
+\end{eqnarray}
+\noindent
+Este resultado dice que la temperatura es una medida directa de la energía cinética media molecular. Reordenando la ecuación (\ref{ecu2}), se puede relacionar la energía cinética de traslación molecular a la temperatura:
+\begin{equation}
+ \frac{1}{2} m_0 N\overline {v^2 } = \frac{3}{2} k_B T
+\label{ecu3}
+\end{equation}
+\noindent
+Donde la ecuación (\ref{ecu3}) representa \textbf{la energía cinética promedio por molécula}, es decir la media de la energía cinética de traslación por molécula es $\frac{3}{2}k_B T$. Debido a que $\overline {v_x ^2 }  = \frac{1}{3}\overline {v^2 } $, se sigue que
+\begin{equation}
+ \frac{1}{2} m_0 \overline {v_x ^2 }=\frac{1}{2} k_B T
+\label{ecu4}
+\end{equation}
+\noindent
+De manera similar para las direcciones $y$ y $z$
+\begin{equation*}
+ \frac{1}{2} m_0 \overline {v_y ^2 }=\frac{1}{2} k_B T\ \ and \ \ \frac{1}{2} m_0 \overline {v_x ^2 }=\frac{1}{2} k_B T
+\end{equation*}
+\noindent
+Por consiguiente \textit{``Cada grado de libertad contribuye $\frac{1}{2}k_B T$ a la energía de un sistema, donde los posibles grados de libertad son aquellas asociadas con la traslación, rotación, y la vibración de las moléculas''}, \textit{``en general, un ''grado de libertad`` se refiere a un medio independiente mediante el cual una molécula puede poseer energía''}\footnote{\cite{serway} Serway, Raymond A. \& Jewett, John W. Jr. {\em "`Physics for Scientists and Engineers whit Modern Physics"'}. Brooks/Cole Cengage Learning, Eighth Edition, 2010. Páginas $601-603$}.\\
+\textit{``En mecánica estadística y clásica, el teorema de equipartición es una fórmula general que relaciona la temperatura de un sistema con su energía media. La idea central de la equipartición es que, en equilibrio térmico, la energía se reparte en partes iguales entre sus varias formas.\\
+En forma más general, puede ser aplicado a cualquier sistema clásico en equilibrio térmico, no importa cuán complejo sea el mismo. El teorema de equipartición puede ser utilizado para derivar la ley de los gases ideales clásica , y la Ley de Dulong-Petit para los calores específicos de los sólidos. También puede ser utilizado para predecir las propiedades de las estrellas, aún las enanas blancas y estrellas de neutrones, dado que su validez se extiende a situaciones en las que existan efectos relativistas.\\
+A pesar de que el teorema de equipartición realiza predicciones muy precisas en ciertas circunstancias, esto no es así cuando los efectos cuánticos son relevantes. La equipartición es válida solo cuando la energía térmica $k_B T$ es mucho mayor que el espaciamiento entre los niveles de energía cuánticos. Cuando la energía térmica es menor que el espaciamiento entre niveles de energía cuánticos en un grado de libertad en particular, la energía promedio y la capacidad calórica de este grado de libertad son menores que los valores predichos por la equipartición. Se dice que dicho grado de libertad está "congelado". Por ejemplo, el calor específico de un sólido disminuye a bajas temperaturas dado que varios tipos de movimientos se congelan, en lugar de permanecer constantes como predice la equipartición. Estas reducciones en los calores específicos fueron los primeros síntomas que notaron los físicos del siglo XIX en el sentido que la física clásica era incorrecta y que era necesario avanzar en el desarrollo de nuevas teorías físicas.\\
+La falla de la equipartición en el campo de la radiación electromagnética; también conocida como catástrofe ultravioleta; indujo a Albert Einstein a sugerir que la luz exhibe un comportamiento dual: como onda y como fotones, una hipótesis revolucionaria que impulsó el desarrollo de la mecánica cuántica y la teoría cuántica de campos''}\footnote{\cite{page1} Wikipedia. Equipartition Theorem [en línea] $<$ \url{http://en.wikipedia.org/wiki/Equipartition_theorem}$>$, [Citado en 10 de Abril del 2013].}.
+
+\section{Problemas}
+\subsection{Punto 1}
+\noindent
+Demuestre que para valores pequeños de la frecuencia ($h \nu \ll k_B T$) la fórmula de Plank para la densidad de energía de la radiación del cuerpo negro conduce a la expresión correspondiente de Rayleigh-Jeans.\\
+Muestre también que para valores grandes de la frecuencia conduce a la ley de Wien.\[\]
+Para $h \nu \ll k_B T$.\\
+\begin{equation}
+ \varrho (\nu)= \frac{8 \pi h}{c^{3}} \frac{\nu ^{3}}{e^{\frac{h \nu}{k_B T}} -1}
+\label{ecu5}
+\end{equation}
+\noindent
+Para determinar la fórmula de Rayleigh-Jeans se determina el limite cuando $h \nu \rightarrow 0$ de la siguiente forma:
+\begin{eqnarray}
+ \mathop {\lim }\limits_{\nu  \to 0} \frac{{8\pi h \nu }}{{c^3 }}\frac{{\nu ^2 }}{{e^{\frac{{h\nu }}{{k_B T}}}  - 1}} & = & \frac{{\frac{d}{{d\nu }}\left( {8\pi h\nu \nu ^2 } \right)}}{{\frac{d}{{d\nu }}\left( {c^3 \left( {e^{\frac{{h\nu }}{{k_B T}}}  - 1} \right)} \right)}}\nonumber \\
+ & = & \frac{8\pi \nu ^2}{c^3 \left( {\frac{1}{{k_B T}}e^{\frac{{h\nu }}{{k_B T}}} } \right)}\nonumber \\
+ & = & \frac{8\pi \nu ^2 k_B T}{c^3} \label{ecu6}
+\end{eqnarray}
+\noindent
+Donde la ecuación (\ref{ecu6}) es la ecuación de Rayleigh-Jeans.\[\]
+Para la ecuación de Wien se necesita que $h \nu \gg k_B T$, entonces se toma la ecuación (\ref{ecu5}), esto se cumple si $C_1=\frac{8 \pi h}{c^3}$ y $e^{\frac{h \nu}{k_B T}}\gg 1$, entonces
+\begin{eqnarray}
+ \varrho (\nu) & = & \frac{C_1 \nu ^3}{e^{\frac{h \nu}{k_B T}}};\ \ si C_2 = \frac{h}{k_B}\nonumber \\
+ & = & \frac{C_1 \nu ^3}{e^{\frac{C_2 \nu}{ T}}} \label{ecu7}
+\end{eqnarray}
+\noindent
+donde la ecuación (\ref{ecu7}) es la ecuación de Wien.
+
+\subsection{Punto 2}
+\noindent
+A partir de la fórmula de Planck para la densidad de energía, demuestre que la constante de Stefan-Boltzman es igual a:
+\begin{equation*}
+ \sigma = \frac{2 \pi ^5 k_{B} ^4 }{15c^2h^3}
+\end{equation*}
+\noindent
+\textit{Ayuda:} usar el cambio de variable $x=\frac{h \nu}{k_B T}$ y el resultado
+\begin{equation*}
+ \int\limits_0^\infty  {x^3 \left( {e^x  - 1} \right)^{ - 1} }  = \frac{{\pi ^4 }}{{15}}
+\end{equation*}
+\noindent
+Realizando el cambio de variable a la ecuación (\ref{ecu5}) se obtiene:
+\begin{equation}
+ \varrho (\nu) = \frac{{8\pi hk_B ^3 T^3 }}{{c^3 h^3 }}\frac{{x^3 }}{{e^x  - 1}}
+\label{ecu8}
+\end{equation}
+\noindent
+y recordando el cambio de variable
+\begin{eqnarray}
+ x & = & \frac{h \nu}{k_B T}\nonumber \\
+ dx & = & \frac{h d\nu}{k_B T} \nonumber \\
+\frac{k_B T}{h} dx & = & d\nu \label{ecu9}
+\end{eqnarray}
+\noindent
+al sustituir la ecuación (\ref{ecu9}) en la ecuación (\ref{ecu8}) se obtiene la densidad de energía
+\begin{eqnarray}
+& \varrho (\nu) d\nu = & \frac{{8\pi hk_B ^3 T^3 }}{{c^3 h^3 }}\frac{{x^3 }}{{e^x  - 1}}\frac{k_B T}{h} dx\nonumber \\
+R = & \frac{c}{4} \int\limits_0^\infty  {\varrho (\nu) d\nu} = & \frac{{8\pi hk_B ^3 T^3 }}{{c^3 h^3 }}\int\limits_0^\infty  {\frac{{x^3 }}{{e^x  - 1}}\frac{{k_B T}}{h}} dx\nonumber \\
+R = & \frac{c}{4}\frac{8\pi k_B ^4 T^4 }{c^3 h^3 } \frac{\pi^4 }{15} & \nonumber \\
+R = & \frac{2\pi^5 k_B ^4 T^4 }{c^2 h^3 } & \label{ecu10}
+\end{eqnarray}
+\noindent
+Ahora sustituyendo $\sigma = \frac{2 \pi ^5 k_{B} ^4 }{15c^2h^3}$ se obtiene la ecuación de de Stefan-Boltzman
+\begin{equation}
+ R=\sigma T ^4
+\label{ecu11}
+\end{equation}
+
+\subsection{Punto 7}
+\noindent
+La temperatura de un cuerpo negro es de $2900\ \ K$. Al enfriarlo, la longitud de onda a la cual la densidad de energía radiada es máxima cambia en $9 * 10^{-6}m$. ¿Cuál es la temperatura final del cuerpo?.\[\]
+\noindent
+De acuerdo a la ley desplazamiento de Wien se tiene que 
+\begin{equation}
+ \lambda _{max} T= constante
+\label{ecu12}
+\end{equation}
+\noindent
+y al hacer el siguiente análisis
+\begin{eqnarray}
+ \lambda _{max} & = &\frac{Cte}{T_1} \nonumber\\
+ T_2 =\frac{Cte}{\lambda _{max} + \lambda _{var}} \label{ecu13}
+\end{eqnarray}
+\noindent
+donde:\\
+$Cte = 2.898 * 10^{-3}mK$,\\
+$T_1 = 2900\ \ K$,\\
+$\lambda _{var} = 9 * 10^{-6}m$,\\
+$T_2 = $ Temperatu final del cuerpo.\\
+Al sustituir en los valores en la ecuación (\ref{ecu13}) se tiene 
+\begin{equation}
+ T_2 =\frac{2.898 * 10^{-3}mK}{\frac{2.898 * 10^{-3}mK}{2900\ \ K} + 9 * 10^{-6}m}
+\label{ecu14}
+\end{equation}
+\noindent
+El resultado de la ecuación (\ref{ecu14}) es $T_2 = 289.81998\ \ K$. 
+
+\subsection{Punto 8}
+\noindent
+Una esfera ennegrecida que está a una temperatura de $27°C$, se esta enfría hasta alcanzar una temperatura de $20°C$. ¿En cuánto variará la longitud de onda a la cual la densidad de energía es máxima?.\[\]
+\noindent
+\begin{eqnarray}
+ Cte & = \lambda_{min} T_1\nonumber \\
+ \lambda_{min} & = \frac{Cte}{T_1} \label{ecu15}
+\end{eqnarray}
+\begin{eqnarray}
+ Cte & = \lambda_{max} T_2\nonumber \\
+ \lambda_{max} & = \frac{Cte}{T_2} \label{ecu16}
+\end{eqnarray}
+\noindent
+de las ecuaciones (\ref{ecu15}) y (\ref{ecu16}) se determina un $\Delta \lambda$, el cual será
+\begin{eqnarray}
+ \Delta \lambda & = & \lambda_{max} - \lambda_{min}\nonumber \\
+ & = & \frac{Cte}{T_2} -\frac{Cte}{T_1} \label{ecu17}
+\end{eqnarray}
+\noindent
+donde:\\
+$Cte  = 2.898 * 10^{-3}mK$,\\
+$T_1 = 27°C = 280.15\ \ K$,\\
+$T_2 = 27°C = 293.15\ \ K$,\\
+Al sustituir en los valores en la ecuación (\ref{ecu17}) se tiene 
+\begin{equation}
+ \Delta \lambda = \frac{2.898 * 10^{-3}mK}{T_2 = 27°C = 293.15\ \ K} -\frac{2.898 * 10^{-3}mK}{280.15\ \ K}
+\label{ecu18}
+\end{equation}
+\noindent
+El resultado de la ecuación (\ref{ecu18}) es $\Delta \lambda =  230.5516n$m.
+
+\subsection{Punto 9}
+\noindent
+Si solamente el $5\%$ de la energía disipada por un bombillo es irradiada en forma de luz visible. ¿cuántos fotones por segundo son emitidos por un bombillo de 100 $W$?. Suponga que la longitud de onda de la luz es de $5600$\AA{}.\[\]
+\noindent
+\begin{equation}
+ E_{foton}= h\nu = h\frac{c}{\lambda}
+\label{ecu19}
+\end{equation}
+\begin{eqnarray}
+ Fotones_{por\ \ segundo} & = & \frac{\%Energia\ \ disipada}{E}\\\label{ecu20}
+& = & \frac{\%Energia\ \ disipada}{h\frac{c}{\lambda}}\label{ecu21}
+\end{eqnarray}
+\noindent
+donde:\\
+Energía disipada $= 100 * 5\% \ \ Ws$,\\
+$h = 6.626 * 10^{-34}J s$,\\
+$c = 2.99792458* 10^{8} m/s$,\\
+$\lambda = 5600$\AA{} $= 560n$m.\\
+Al sustituir en los valores en la ecuación (\ref{ecu21}) se tiene 
+\begin{equation}
+ Fotones_{por\ \ segundo} = \frac{100 * 5\% \ \ W s}{h = 6.626 * 10^{-34}J s \frac{2.99792458* 10^{8} m/s}{560nm}}
+\label{ecu22}
+\end{equation}
+El resultado de la ecuación (\ref{ecu22}) es $Fotones_{por\ \ segundo} = 14.095515 *10^{18}$.
+
+\bibliographystyle{ieeetran}
+\begin{thebibliography}{99}
+\bibitem{serway} Serway, Raymond A. \& Jewett, John W. Jr.
+{\em "`Physics for Scientists and Engineers whit Modern Physics"'}.
+Brooks/Cole Cengage Learning, Eighth Edition, 2010.
+
+\bibitem{page1} Wikipedia. Equipartition Theorem [en línea] $<$ \url{http://en.wikipedia.org/wiki/Equipartition_theorem}$>$, [Citado en 10 de Abril del 2013].
+\end{thebibliography}
+\end{document}
