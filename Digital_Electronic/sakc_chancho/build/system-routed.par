@@ -1,0 +1,222 @@
+Release 12.4 par M.81d (lin)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+cabas-laptop::  Wed Jun 20 18:07:24 2012
+
+par -ol high -w system.ncd system-routed.ncd 
+
+
+Constraints file: system.pcf.
+Loading device for application Rf_Device from file '6slx16.nph' in environment /opt/Xilinx/12.4/ISE_DS/ISE/.
+   "system" is an NCD, version 3.2, device xc6slx16, package csg324, speed -3
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+INFO:Security:54 - 'xc6slx16' is a WebPack part.
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue
+to function, but you no longer qualify for Xilinx software updates or new releases.
+
+----------------------------------------------------------------------
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
+
+
+Device speed data version:  "PRODUCTION 1.15 2010-12-02".
+
+
+
+Device Utilization Summary:
+
+Slice Logic Utilization:
+  Number of Slice Registers:                 1,857 out of  18,224   10%
+    Number used as Flip Flops:               1,857
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                      2,261 out of   9,112   24%
+    Number used as logic:                    2,161 out of   9,112   23%
+      Number using O6 output only:           1,437
+      Number using O5 output only:             403
+      Number using O5 and O6:                  321
+      Number used as ROM:                        0
+    Number used as Memory:                      44 out of   2,176    2%
+      Number used as Dual Port RAM:             44
+        Number using O6 output only:             0
+        Number using O5 output only:             0
+        Number using O5 and O6:                 44
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:             0
+    Number used exclusively as route-thrus:     56
+      Number with same-slice register load:     28
+      Number with same-slice carry load:        17
+      Number with other load:                   11
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   926 out of   2,278   40%
+  Number of LUT Flip Flop pairs used:        2,922
+    Number with an unused Flip Flop:         1,165 out of   2,922   39%
+    Number with an unused LUT:                 661 out of   2,922   22%
+    Number of fully used LUT-FF pairs:       1,096 out of   2,922   37%
+    Number of slice register sites lost
+      to control set restrictions:               0 out of  18,224    0%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        91 out of     232   39%
+    Number of LOCed IOBs:                       60 out of      91   65%
+    IOB Flip Flops:                             25
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         7 out of      32   21%
+  Number of RAMB8BWERs:                          2 out of      64    3%
+  Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       2 out of      16   12%
+    Number used as BUFGs:                        2
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
+  Number of ILOGIC2/ISERDES2s:                   9 out of     248    3%
+    Number used as ILOGIC2s:                     9
+    Number used as ISERDES2s:                    0
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     248    0%
+  Number of OLOGIC2/OSERDES2s:                  16 out of     248    6%
+    Number used as OLOGIC2s:                    16
+    Number used as OSERDES2s:                    0
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            3 out of      32    9%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       2    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 16 secs 
+Finished initial Timing Analysis.  REAL time: 16 secs 
+
+WARNING:Par:288 - The signal lm0/Mram_registers2_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal lm0/Mram_registers4_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal lm0/Mram_registers14_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal lm0/Mram_registers13_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal lm0/Mram_registers3_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal lm0/Mram_registers12_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal lm0/Mram_registers1_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal lm0/Mram_registers5_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal lm0/Mram_registers15_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal lm0/Mram_registers11_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+Starting Router
+
+
+Phase  1  : 14030 unrouted;      REAL time: 17 secs 
+
+Phase  2  : 12182 unrouted;      REAL time: 19 secs 
+
+Phase  3  : 5351 unrouted;      REAL time: 34 secs 
+
+Phase  4  : 5351 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 36 secs 
+
+Updating file: system-routed.ncd with current fully routed design.
+
+Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 58 secs 
+
+Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 58 secs 
+
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 58 secs 
+
+Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 58 secs 
+
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 58 secs 
+
+Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 2 secs 
+Total REAL time to Router completion: 1 mins 2 secs 
+Total CPU time to Router completion: 1 mins 4 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|           clk_BUFGP | BUFGMUX_X3Y13| No   |  627 |  0.544     |  1.390      |
++---------------------+--------------+------+------+------------+-------------+
+|   oec_ADC_IBUF_BUFG | BUFGMUX_X3Y16| No   |   16 |  0.025     |  0.872      |
++---------------------+--------------+------+------+------------+-------------+
+|   gpio0/clk_seconds |         Local|      |    7 |  1.543     |  2.345      |
++---------------------+--------------+------+------+------------+-------------+
+|display0/buttons0/se |              |      |      |            |             |
+|             lec_clk |         Local|      |    1 |  0.000     |  0.626      |
++---------------------+--------------+------+------+------------+-------------+
+| gpio0/reloj0/clk_1k |         Local|      |    2 |  0.568     |  1.351      |
++---------------------+--------------+------+------+------------+-------------+
+|signal0/adc0/counter |              |      |      |            |             |
+|               _clk2 |         Local|      |    4 |  0.398     |  1.746      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+Timing Score: 0 (Setup: 0, Hold: 0, Component Switching Limit: 0)
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  NET "clk_BUFGP/IBUFG" PERIOD = 20 ns HIGH | SETUP       |     5.648ns|    14.352ns|       0|           0
+   50%                                      | HOLD        |     0.265ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+WARNING:Par:283 - There are 10 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+
+Total REAL time to PAR completion: 1 mins 7 secs 
+Total CPU time to PAR completion: 1 mins 8 secs 
+
+Peak Memory Usage:  199 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+Timing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 12
+Number of info messages: 0
+
+Writing design to file system-routed.ncd
+
+
+
+PAR done!

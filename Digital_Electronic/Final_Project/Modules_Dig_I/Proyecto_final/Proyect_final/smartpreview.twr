@@ -1,0 +1,35 @@
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+------------------------------------------------------------------------------------------------------
+  Constraint                                |  Check  | Worst Case |  Best Case | Timing |   Timing   
+                                            |         |    Slack   | Achievable | Errors |    Score   
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net clk | SETUP   |         N/A|     7.039ns|     N/A|           0
+  _BUFGP                                    | HOLD    |     0.784ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net m1/ | SETUP   |         N/A|     2.389ns|     N/A|           0
+  m1/cont<16>                               | HOLD    |     0.561ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net m5/ | SETUP   |         N/A|     6.366ns|     N/A|           0
+  cont<18>                                  | HOLD    |     0.703ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net m1/ | SETUP   |         N/A|     3.845ns|     N/A|           0
+  m1/f                                      | HOLD    |     0.655ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net m1/ | SETUP   |         N/A|     2.382ns|     N/A|         350
+  m2/k                                      | HOLD    |     0.193ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net m2/ | SETUP   |         N/A|     7.064ns|     N/A|           0
+  m2/v                                      | HOLD    |     0.447ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net m6/ | SETUP   |         N/A|     5.793ns|     N/A|           0
+  m2/clkmux                                 | HOLD    |     0.404ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+
+
+1 constraint not met.
+INFO:Timing:2761 - N/A entries in the Constraints list may indicate that the 
+   constraint does not cover any paths or that it has no requested value.
+
+

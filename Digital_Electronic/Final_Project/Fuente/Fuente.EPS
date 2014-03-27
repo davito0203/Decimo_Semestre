@@ -1,0 +1,329 @@
+%!PS-Adobe-2.0 EPSF-1.2
+%%Title: K:\Fuente_Dig_II\Fuente.LYT
+%%Creator: LX_PSDVC
+%%CreationDate: Mon May 20 23:22:34 2013
+%%BoundingBox: (atend)
+%%EndComments
+
+/docstate save def
+% Global scaling/translation
+0.072 0.072 scale
+1 setlinecap
+
+% Purpose: draw simple line
+% Usage:   x1 y1 x2 y2 t line
+/line
+ { setlinewidth
+   4 2 roll
+   moveto
+   lineto
+   stroke
+ } bind def
+
+% Purpose: draw elliptical quadrant arc
+% Usage:   cx cy xs ys xe ye a b q t
+%    where cx,cy are centre of ellipse
+%          a,b are ellipse diameter
+%          xs,ys, xe,ye are start, end coords
+%          q is quadrant number.
+%          t is line width
+/quadrant
+ { gsave
+   setlinewidth
+   /q exch def
+   /b exch def
+   /a exch def
+   /ye exch currentlinewidth add def
+   /xe exch currentlinewidth sub def
+   /ys exch currentlinewidth sub def
+   /xs exch currentlinewidth add def
+   /cy exch def
+   /cx exch def
+   /ysf b a div def
+   cx cy translate
+   q 1 eq { /xs xs neg def /xe xe neg def } if
+   q 2 eq { /xs xs neg def
+            /ys ys neg def
+            /xe xe neg def
+            /ye ye neg def
+          } if
+   q 3 eq { /ys ys neg def /ye ye neg def } if
+   newpath
+   xe ys moveto
+   xs ys lineto
+   xs ye lineto
+   xe ye lineto
+   closepath
+   clip
+   newpath
+   1 ysf scale
+   q 90 mul rotate
+   a 0 moveto 0 0 a 0 90 arc
+   stroke
+   grestore
+ } bind def
+
+% Purpose: draw bezier arc
+% Usage:   x1 y1 ... x4, y4 t
+%          xn yn are bezier points
+%          t is line width
+/bezier
+ { setlinewidth
+   moveto
+   curveto
+   stroke
+ } bind def
+
+% Purpose: draw filled rectangle
+% Usage:   x1 y1 x2 y2 fillbox
+/fillbox
+ { /y2 exch def
+   /x2 exch def
+   /y1 exch def
+   /x1 exch def
+   x1 y1 moveto
+   x2 y1 lineto
+   x2 y2 lineto
+   x1 y2 lineto
+   closepath
+   fill
+ } bind def
+
+% Purpose: draw elliptical blob in colour c (0 black, 1 white)
+% Usage:   x y a b c ellipse
+/eblob
+ { /c exch def
+   /b exch 2 div def
+   /a exch 2 div def
+   /y exch def
+   /x exch def
+   gsave
+   1 c sub setgray
+   x y translate
+   1 b a div scale
+   0 0 a 0 360 arc
+   fill
+   grestore
+ } bind def
+
+% Purpose: draw rectangular blob in colour c (0 black, 1 white)
+% Usage:   x y a b c rectangle
+/rblob
+ { /c exch def
+   /b exch 2 div def
+   /a exch 2 div def
+   /y exch def
+   /x exch def
+   gsave
+   1 c sub setgray
+   x a sub y b sub moveto
+   x a add y b sub lineto
+   x a add y b add lineto
+   x a sub y b add lineto
+   closepath
+   fill
+   grestore
+ } bind def
+
+% Purpose: draw polygonal blob in colour c (0 black, 1 white)
+% Usage:   xn yn ... x1 y1 np c pblob
+/pblob
+ { /c exch def
+   /np exch def
+   1 c sub setgray
+   moveto
+   np 1 sub
+   {lineto} repeat
+   closepath
+   fill
+ } bind def
+
+% Purpose: draw track segment of specified thickness
+% Usage:   x1 y1 x2 y2 t thickline
+/track
+ { gsave
+   0 setlinecap
+   setlinewidth
+   4 2 roll
+   moveto
+   lineto
+   stroke
+   grestore
+ } bind def
+%%EndProlog
+
+300 dup translate
+0 0 moveto 2550 0 lineto 2550 1750 lineto 0 1750 lineto clip newpath
+850 650 70 70 1 eblob
+725 1000 70 70 1 eblob
+850 650 800 650 70 track
+800 650 70 70 1 eblob
+800 650 700 750 70 track
+700 750 70 70 1 eblob
+700 750 700 975 70 track
+700 975 70 70 1 eblob
+700 975 725 1000 70 track
+725 1450 70 70 1 eblob
+725 1450 625 1550 70 track
+625 1550 70 70 1 eblob
+625 1550 300 1550 70 track
+950 1450 1100 1450 70 track
+1100 1450 70 70 1 eblob
+1100 1450 1300 1250 70 track
+1300 1250 70 70 1 eblob
+1300 1250 1435 1250 70 track
+1435 1250 70 70 1 eblob
+1435 1250 1650 1465 70 track
+1650 1465 70 70 1 eblob
+1650 1465 1800 1465 70 track
+725 1000 70 70 1 eblob
+725 1450 70 70 1 eblob
+725 1000 700 1025 70 track
+700 1025 70 70 1 eblob
+700 1025 700 1425 70 track
+700 1425 70 70 1 eblob
+700 1425 725 1450 70 track
+850 650 70 70 1 eblob
+850 650 850 350 70 track
+725 1450 70 70 1 eblob
+950 1450 725 1450 70 track
+725 1000 70 70 1 eblob
+725 1000 850 1000 70 track
+850 650 70 70 1 eblob
+850 650 950 650 70 track
+950 650 70 70 1 eblob
+950 650 1400 700 70 track
+300 1350 175 1350 70 track
+175 1350 70 70 1 eblob
+175 1350 175 675 70 track
+175 675 70 70 1 eblob
+175 675 300 550 70 track
+300 1150 425 1150 70 track
+425 1150 70 70 1 eblob
+425 1150 425 475 70 track
+425 475 70 70 1 eblob
+425 475 300 350 70 track
+1925 1275 100 100 1 eblob
+2250 800 2250 950 100 track
+2250 950 100 100 1 eblob
+2250 950 1925 1275 100 track
+1025 1150 100 100 1 eblob
+1800 1250 1675 1250 100 track
+1675 1250 100 100 1 eblob
+1675 1250 1575 1150 100 track
+1575 1150 100 100 1 eblob
+1575 1150 1025 1150 100 track
+1025 1150 100 100 1 eblob
+1025 1150 1025 975 100 track
+1025 975 100 100 1 eblob
+1025 975 850 800 100 track
+1025 1150 70 70 1 eblob
+1025 1150 1000 1175 70 track
+1000 1175 70 70 1 eblob
+1000 1175 1000 1200 70 track
+1000 1200 70 70 1 eblob
+1000 1200 950 1250 70 track
+950 1250 70 70 1 eblob
+950 1250 950 1350 70 track
+1050 200 100 100 1 eblob
+1050 200 1050 350 100 track
+1925 1275 100 100 1 eblob
+1800 1250 1925 1250 100 track
+1925 1250 100 100 1 eblob
+1925 1250 1925 1275 100 track
+1050 200 100 100 1 eblob
+1525 150 100 100 1 eblob
+1050 200 1100 150 100 track
+1100 150 100 100 1 eblob
+1100 150 1525 150 100 track
+1525 150 100 100 1 eblob
+1850 300 1700 150 100 track
+1700 150 100 100 1 eblob
+1700 150 1525 150 100 track
+1050 200 100 100 1 eblob
+1050 200 1000 150 100 track
+1000 150 100 100 1 eblob
+1000 150 300 150 100 track
+1850 500 1600 500 70 track
+1600 500 70 70 1 eblob
+1600 500 1400 300 70 track
+1850 500 1975 500 70 track
+1975 500 70 70 1 eblob
+1975 500 2075 600 70 track
+2075 600 70 70 1 eblob
+2075 600 2250 600 70 track
+1850 500 1850 625 70 track
+1850 625 70 70 1 eblob
+1850 625 1800 675 70 track
+1800 675 70 70 1 eblob
+1800 675 1800 1035 70 track
+1800 1035 1765 1000 70 track
+1765 1000 70 70 1 eblob
+1765 1000 1400 1000 70 track
+1850 300 2275 300 100 track
+2275 300 100 100 1 eblob
+2275 300 2400 425 100 track
+2400 425 100 100 1 eblob
+2400 425 2400 650 100 track
+2400 650 100 100 1 eblob
+2400 650 2250 800 100 track
+1925 1275 100 100 1 eblob
+1925 1275 1950 1275 100 track
+1950 1275 100 100 1 eblob
+1950 1275 1950 1650 100 track
+1950 1650 100 100 1 eblob
+1950 1650 1400 1650 100 track
+1400 1650 100 100 1 eblob
+1400 1650 1400 1400 100 track
+225 1475 375 1475 375 1625 225 1625 4 1 pblob
+300 1550 30 30 0 eblob
+225 875 375 875 375 1025 225 1025 4 1 pblob
+300 950 30 30 0 eblob
+225 1275 375 1275 375 1425 225 1425 4 1 pblob
+300 1350 30 30 0 eblob
+225 1075 375 1075 375 1225 225 1225 4 1 pblob
+300 1150 30 30 0 eblob
+1850 500 150 150 1 eblob
+1850 500 30 30 0 eblob
+1850 300 150 150 1 eblob
+1850 300 30 30 0 eblob
+950 1450 80 80 1 eblob
+950 1450 25 25 0 eblob
+950 1350 80 80 1 eblob
+950 1350 25 25 0 eblob
+850 1000 150 150 1 eblob
+850 1000 30 30 0 eblob
+850 800 150 150 1 eblob
+850 800 30 30 0 eblob
+850 350 150 150 1 eblob
+850 350 30 30 0 eblob
+1050 350 150 150 1 eblob
+1050 350 30 30 0 eblob
+1400 1400 150 150 1 eblob
+1400 1400 30 30 0 eblob
+1400 1000 150 150 1 eblob
+1400 1000 30 30 0 eblob
+1400 300 150 150 1 eblob
+1400 300 30 30 0 eblob
+1400 700 150 150 1 eblob
+1400 700 30 30 0 eblob
+2250 600 150 150 1 eblob
+2250 600 30 30 0 eblob
+2250 800 150 150 1 eblob
+2250 800 30 30 0 eblob
+300 150 150 150 1 eblob
+300 150 30 30 0 eblob
+300 350 150 150 1 eblob
+300 350 30 30 0 eblob
+300 550 150 150 1 eblob
+300 550 30 30 0 eblob
+1725 1540 1725 1390 1875 1390 1875 1540 4 1 pblob
+1800 1465 30 30 0 eblob
+1725 1325 1725 1175 1875 1175 1875 1325 4 1 pblob
+1800 1250 30 30 0 eblob
+1725 1110 1725 960 1875 960 1875 1110 4 1 pblob
+1800 1035 30 30 0 eblob
+docstate restore
+
+%%Trailer
+%%BoundingBox: 0 0 226 169

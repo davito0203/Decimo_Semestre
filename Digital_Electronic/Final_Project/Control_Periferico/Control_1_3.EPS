@@ -1,0 +1,619 @@
+%!PS-Adobe-2.0 EPSF-1.2
+%%Title: Z:\home\davito\Documents\UNAL\Decimo_Semestre\Digital_Electronic\Final_Project\Control_Periferico\Control_1_3.LYT
+%%Creator: LX_PSDVC
+%%CreationDate: Tue Jun 25 12:51:32 2013
+%%BoundingBox: (atend)
+%%EndComments
+
+/docstate save def
+% Global scaling/translation
+0.072 0.072 scale
+1 setlinecap
+
+% Purpose: draw simple line
+% Usage:   x1 y1 x2 y2 t line
+/line
+ { setlinewidth
+   4 2 roll
+   moveto
+   lineto
+   stroke
+ } bind def
+
+% Purpose: draw elliptical quadrant arc
+% Usage:   cx cy xs ys xe ye a b q t
+%    where cx,cy are centre of ellipse
+%          a,b are ellipse diameter
+%          xs,ys, xe,ye are start, end coords
+%          q is quadrant number.
+%          t is line width
+/quadrant
+ { gsave
+   setlinewidth
+   /q exch def
+   /b exch def
+   /a exch def
+   /ye exch currentlinewidth add def
+   /xe exch currentlinewidth sub def
+   /ys exch currentlinewidth sub def
+   /xs exch currentlinewidth add def
+   /cy exch def
+   /cx exch def
+   /ysf b a div def
+   cx cy translate
+   q 1 eq { /xs xs neg def /xe xe neg def } if
+   q 2 eq { /xs xs neg def
+            /ys ys neg def
+            /xe xe neg def
+            /ye ye neg def
+          } if
+   q 3 eq { /ys ys neg def /ye ye neg def } if
+   newpath
+   xe ys moveto
+   xs ys lineto
+   xs ye lineto
+   xe ye lineto
+   closepath
+   clip
+   newpath
+   1 ysf scale
+   q 90 mul rotate
+   a 0 moveto 0 0 a 0 90 arc
+   stroke
+   grestore
+ } bind def
+
+% Purpose: draw bezier arc
+% Usage:   x1 y1 ... x4, y4 t
+%          xn yn are bezier points
+%          t is line width
+/bezier
+ { setlinewidth
+   moveto
+   curveto
+   stroke
+ } bind def
+
+% Purpose: draw filled rectangle
+% Usage:   x1 y1 x2 y2 fillbox
+/fillbox
+ { /y2 exch def
+   /x2 exch def
+   /y1 exch def
+   /x1 exch def
+   x1 y1 moveto
+   x2 y1 lineto
+   x2 y2 lineto
+   x1 y2 lineto
+   closepath
+   fill
+ } bind def
+
+% Purpose: draw elliptical blob in colour c (0 black, 1 white)
+% Usage:   x y a b c ellipse
+/eblob
+ { /c exch def
+   /b exch 2 div def
+   /a exch 2 div def
+   /y exch def
+   /x exch def
+   gsave
+   1 c sub setgray
+   x y translate
+   1 b a div scale
+   0 0 a 0 360 arc
+   fill
+   grestore
+ } bind def
+
+% Purpose: draw rectangular blob in colour c (0 black, 1 white)
+% Usage:   x y a b c rectangle
+/rblob
+ { /c exch def
+   /b exch 2 div def
+   /a exch 2 div def
+   /y exch def
+   /x exch def
+   gsave
+   1 c sub setgray
+   x a sub y b sub moveto
+   x a add y b sub lineto
+   x a add y b add lineto
+   x a sub y b add lineto
+   closepath
+   fill
+   grestore
+ } bind def
+
+% Purpose: draw polygonal blob in colour c (0 black, 1 white)
+% Usage:   xn yn ... x1 y1 np c pblob
+/pblob
+ { /c exch def
+   /np exch def
+   1 c sub setgray
+   moveto
+   np 1 sub
+   {lineto} repeat
+   closepath
+   fill
+ } bind def
+
+% Purpose: draw track segment of specified thickness
+% Usage:   x1 y1 x2 y2 t thickline
+/track
+ { gsave
+   0 setlinecap
+   setlinewidth
+   4 2 roll
+   moveto
+   lineto
+   stroke
+   grestore
+ } bind def
+%%EndProlog
+
+300 dup translate
+0 0 moveto 4354 0 lineto 4354 1831 lineto 0 1831 lineto clip newpath
+1999 1376 1999 1592 60 track
+1999 1592 60 60 1 eblob
+1999 1592 1907 1683 60 track
+1907 1683 60 60 1 eblob
+1907 1683 1472 1683 60 track
+729 464 493 464 60 track
+493 464 60 60 1 eblob
+493 464 336 621 60 track
+926 464 926 621 60 track
+926 621 60 60 1 eblob
+926 621 769 621 60 track
+336 621 139 621 60 track
+1359 621 1359 818 60 track
+1911 661 1911 857 60 track
+926 464 729 464 60 track
+1292 1053 1499 1259 80 track
+1499 1259 80 80 1 eblob
+1499 1259 1499 1376 80 track
+1084 909 1084 1053 80 track
+1084 1053 80 80 1 eblob
+1084 1053 1292 1053 80 track
+772 1683 872 1683 80 track
+1084 909 1124 909 80 track
+1124 909 80 80 1 eblob
+1124 909 1162 857 80 track
+1162 857 80 80 1 eblob
+1162 857 1162 739 80 track
+577 737 80 80 1 eblob
+560 975 560 774 80 track
+560 774 80 80 1 eblob
+560 774 577 737 80 track
+577 737 80 80 1 eblob
+577 737 577 737 80 track
+577 737 80 80 1 eblob
+1162 739 915 739 80 track
+915 739 80 80 1 eblob
+915 739 577 737 80 track
+577 737 80 80 1 eblob
+577 737 533 649 80 track
+139 818 336 818 60 track
+139 818 139 935 60 track
+139 935 60 60 1 eblob
+139 935 105 975 60 track
+105 975 60 60 1 eblob
+105 975 60 975 60 track
+887 1290 887 1333 60 track
+887 1333 60 60 1 eblob
+887 1333 962 1408 60 track
+962 1408 60 60 1 eblob
+962 1408 1084 1408 60 track
+1084 1408 1072 1419 60 track
+1072 1419 60 60 1 eblob
+1072 1419 1072 1683 60 track
+887 1290 887 1093 60 track
+729 267 593 267 60 track
+593 267 60 60 1 eblob
+593 267 533 207 60 track
+533 207 60 60 1 eblob
+533 207 533 149 60 track
+926 267 729 267 60 track
+729 267 60 60 1 eblob
+729 267 729 267 60 track
+1556 818 1556 942 60 track
+1556 942 60 60 1 eblob
+1556 942 1615 1001 60 track
+1615 1001 60 60 1 eblob
+1615 1001 1615 1417 60 track
+1615 1417 60 60 1 eblob
+1615 1417 1540 1492 60 track
+1540 1492 60 60 1 eblob
+1540 1492 1272 1492 60 track
+1272 1492 60 60 1 eblob
+1272 1492 1272 1683 60 track
+1556 621 1556 318 60 track
+1556 318 60 60 1 eblob
+1556 318 1477 239 60 track
+1477 239 60 60 1 eblob
+1477 239 1162 239 60 track
+1556 818 1556 621 60 track
+1792 1053 1792 1492 60 track
+1792 1492 60 60 1 eblob
+1792 1492 1717 1567 60 track
+1717 1567 60 60 1 eblob
+1717 1567 1372 1567 60 track
+1372 1567 60 60 1 eblob
+1372 1567 1372 1683 60 track
+2107 857 1911 1053 60 track
+1911 1053 60 60 1 eblob
+1911 1053 1792 1053 60 track
+2107 857 2107 661 60 track
+572 1683 672 1683 60 track
+572 1683 493 1683 60 track
+493 1683 60 60 1 eblob
+493 1683 493 1526 60 track
+690 1093 690 897 60 track
+690 1290 690 1093 60 track
+690 1290 690 1368 60 track
+690 1368 60 60 1 eblob
+690 1368 719 1434 60 track
+719 1434 60 60 1 eblob
+719 1434 769 1447 60 track
+2851 71 2389 71 80 track
+2389 71 80 80 1 eblob
+2389 71 2314 146 80 track
+2314 146 80 80 1 eblob
+2314 146 2314 880 80 track
+2314 880 80 80 1 eblob
+2314 880 2421 986 80 track
+3618 238 3453 73 80 track
+3453 73 80 80 1 eblob
+3453 73 3015 73 80 track
+3618 238 3589 267 80 track
+3589 267 80 80 1 eblob
+3589 267 3589 366 80 track
+3589 366 80 80 1 eblob
+3589 366 3574 381 80 track
+2851 71 2853 73 60 track
+2853 73 60 60 1 eblob
+2853 73 3015 73 60 track
+2658 582 2668 571 60 track
+2668 571 60 60 1 eblob
+2668 571 2851 571 60 track
+2658 779 2658 582 60 track
+3799 779 3799 1178 60 track
+3799 1178 60 60 1 eblob
+3799 1178 3536 1441 60 track
+3536 1441 60 60 1 eblob
+3536 1441 3536 1604 60 track
+3996 779 4118 657 60 track
+4118 657 60 60 1 eblob
+4118 657 4118 238 60 track
+3799 779 3996 779 60 track
+3406 1250 3574 1082 60 track
+3574 1082 60 60 1 eblob
+3574 1082 3574 881 60 track
+3406 1250 3406 1378 60 track
+3406 1378 60 60 1 eblob
+3406 1378 3436 1408 60 track
+3436 1408 60 60 1 eblob
+3436 1408 3436 1604 60 track
+3406 1250 3209 1250 60 track
+3209 424 3015 424 60 track
+3015 424 60 60 1 eblob
+3015 424 3015 573 60 track
+3209 424 60 60 1 eblob
+3209 424 3209 424 60 track
+3209 424 3209 228 60 track
+3989 1541 3789 1541 60 track
+3789 1541 60 60 1 eblob
+3789 1541 3725 1604 60 track
+3725 1604 60 60 1 eblob
+3725 1604 3636 1604 60 track
+2461 779 2461 582 60 track
+2461 779 2521 839 60 track
+2521 839 60 60 1 eblob
+2521 839 2521 978 60 track
+2521 978 60 60 1 eblob
+2521 978 2597 1053 60 track
+2597 1053 60 60 1 eblob
+2597 1053 2776 1053 60 track
+3456 582 60 60 1 eblob
+3406 1053 3406 804 60 track
+3406 804 60 60 1 eblob
+3406 804 3456 754 60 track
+3456 754 60 60 1 eblob
+3456 754 3456 582 60 track
+3456 582 60 60 1 eblob
+3406 424 3431 449 60 track
+3431 449 60 60 1 eblob
+3431 449 3431 557 60 track
+3431 557 60 60 1 eblob
+3431 557 3456 582 60 track
+3456 582 60 60 1 eblob
+3799 582 3456 582 60 track
+3209 1053 3406 1053 60 track
+3799 582 3996 582 60 track
+3406 424 3406 228 60 track
+3209 1053 3091 1053 60 track
+926 267 926 109 60 track
+926 109 60 60 1 eblob
+926 109 977 31 60 track
+977 31 60 60 1 eblob
+977 31 2184 31 60 track
+2184 31 60 60 1 eblob
+2184 31 2224 70 60 track
+2224 70 60 60 1 eblob
+2224 70 2224 1752 60 track
+2224 1752 60 60 1 eblob
+2224 1752 2147 1801 60 track
+2147 1801 60 60 1 eblob
+2147 1801 1172 1801 60 track
+1172 1801 60 60 1 eblob
+1172 1801 1172 1683 60 track
+336 818 336 1762 60 track
+336 1762 60 60 1 eblob
+336 1762 361 1801 60 track
+361 1801 60 60 1 eblob
+361 1801 944 1801 60 track
+944 1801 60 60 1 eblob
+944 1801 966 1762 60 track
+966 1762 60 60 1 eblob
+966 1762 972 1683 60 track
+560 975 533 1002 80 track
+533 1002 80 80 1 eblob
+533 1002 533 1368 80 track
+533 1368 80 80 1 eblob
+533 1368 706 1542 80 track
+706 1542 80 80 1 eblob
+706 1542 772 1604 80 track
+772 1604 80 80 1 eblob
+772 1604 772 1683 80 track
+1090 418 60 60 1 eblob
+1090 418 1065 488 60 track
+1065 488 60 60 1 eblob
+1065 488 951 488 60 track
+951 488 60 60 1 eblob
+951 488 926 464 60 track
+1090 418 60 60 1 eblob
+1911 661 1911 218 60 track
+1911 218 60 60 1 eblob
+1911 218 1831 139 60 track
+1831 139 60 60 1 eblob
+1831 139 1052 139 60 track
+1052 139 60 60 1 eblob
+1052 139 1052 318 60 track
+1052 318 60 60 1 eblob
+1052 318 1090 418 60 track
+1090 418 60 60 1 eblob
+1359 621 1359 582 60 track
+1359 582 60 60 1 eblob
+1359 582 1196 418 60 track
+1196 418 60 60 1 eblob
+1196 418 1090 418 60 track
+2736 1453 60 60 1 eblob
+2776 1053 2776 1390 60 track
+2776 1390 60 60 1 eblob
+2776 1390 2736 1453 60 track
+2736 1453 60 60 1 eblob
+2736 1453 2736 1604 60 track
+2836 1604 2736 1604 60 track
+2936 1703 80 80 1 eblob
+2421 986 2421 1228 80 track
+2421 1228 80 80 1 eblob
+2421 1228 2539 1345 80 track
+2539 1345 80 80 1 eblob
+2539 1345 2539 1628 80 track
+2539 1628 80 80 1 eblob
+2539 1628 2614 1703 80 track
+2614 1703 80 80 1 eblob
+2614 1703 2936 1703 80 track
+2936 1703 80 80 1 eblob
+2936 1703 2936 1604 80 track
+2936 1604 3036 1604 80 track
+2421 1486 2421 1703 60 track
+2421 1703 60 60 1 eblob
+2421 1703 2520 1801 60 track
+2520 1801 60 60 1 eblob
+2520 1801 3136 1801 60 track
+3136 1801 60 60 1 eblob
+3136 1801 3136 1604 60 track
+3618 238 3739 238 80 track
+3739 238 80 80 1 eblob
+3739 238 3868 109 80 track
+3868 109 80 80 1 eblob
+3868 109 4220 109 80 track
+4220 109 80 80 1 eblob
+4220 109 4314 204 80 track
+4314 204 80 80 1 eblob
+4314 204 4314 717 80 track
+4314 717 80 80 1 eblob
+4314 717 3989 1041 80 track
+3015 573 3015 1368 60 track
+3015 1368 60 60 1 eblob
+3015 1368 3050 1408 60 track
+3050 1408 60 60 1 eblob
+3050 1408 3336 1408 60 track
+3336 1408 60 60 1 eblob
+3336 1408 3336 1604 60 track
+2658 779 2914 1034 60 track
+2914 1034 60 60 1 eblob
+2914 1034 2914 1428 60 track
+2914 1428 60 60 1 eblob
+2914 1428 2973 1486 60 track
+2973 1486 60 60 1 eblob
+2973 1486 3236 1486 60 track
+3236 1486 60 60 1 eblob
+3236 1486 3236 1604 60 track
+926 464 150 150 1 eblob
+926 464 30 30 0 eblob
+729 464 150 150 1 eblob
+729 464 30 30 0 eblob
+926 267 150 150 1 eblob
+926 267 30 30 0 eblob
+729 267 150 150 1 eblob
+729 267 30 30 0 eblob
+139 621 150 150 1 eblob
+139 621 30 30 0 eblob
+336 621 150 150 1 eblob
+336 621 30 30 0 eblob
+139 818 150 150 1 eblob
+139 818 30 30 0 eblob
+336 818 150 150 1 eblob
+336 818 30 30 0 eblob
+1359 818 150 150 1 eblob
+1359 818 30 30 0 eblob
+1359 621 150 150 1 eblob
+1359 621 30 30 0 eblob
+1556 818 150 150 1 eblob
+1556 818 30 30 0 eblob
+1556 621 150 150 1 eblob
+1556 621 30 30 0 eblob
+690 1290 150 150 1 eblob
+690 1290 30 30 0 eblob
+690 1093 150 150 1 eblob
+690 1093 30 30 0 eblob
+887 1290 150 150 1 eblob
+887 1290 30 30 0 eblob
+887 1093 150 150 1 eblob
+887 1093 30 30 0 eblob
+1911 857 150 150 1 eblob
+1911 857 30 30 0 eblob
+1911 661 150 150 1 eblob
+1911 661 30 30 0 eblob
+2107 857 150 150 1 eblob
+2107 857 30 30 0 eblob
+2107 661 150 150 1 eblob
+2107 661 30 30 0 eblob
+60 975 120 120 1 eblob
+60 975 30 30 0 eblob
+560 975 120 120 1 eblob
+560 975 30 30 0 eblob
+1084 1408 120 120 1 eblob
+1084 1408 30 30 0 eblob
+1084 909 120 120 1 eblob
+1084 909 30 30 0 eblob
+1792 1053 120 120 1 eblob
+1792 1053 30 30 0 eblob
+1292 1053 120 120 1 eblob
+1292 1053 30 30 0 eblob
+1162 239 120 120 1 eblob
+1162 239 30 30 0 eblob
+1162 739 120 120 1 eblob
+1162 739 30 30 0 eblob
+533 149 120 120 1 eblob
+533 149 30 30 0 eblob
+533 649 120 120 1 eblob
+533 649 30 30 0 eblob
+3209 1053 150 150 1 eblob
+3209 1053 30 30 0 eblob
+3406 1053 150 150 1 eblob
+3406 1053 30 30 0 eblob
+3209 1250 150 150 1 eblob
+3209 1250 30 30 0 eblob
+3406 1250 150 150 1 eblob
+3406 1250 30 30 0 eblob
+3406 228 150 150 1 eblob
+3406 228 30 30 0 eblob
+3406 424 150 150 1 eblob
+3406 424 30 30 0 eblob
+3209 228 150 150 1 eblob
+3209 228 30 30 0 eblob
+3209 424 150 150 1 eblob
+3209 424 30 30 0 eblob
+3799 582 150 150 1 eblob
+3799 582 30 30 0 eblob
+3996 582 150 150 1 eblob
+3996 582 30 30 0 eblob
+3799 779 150 150 1 eblob
+3799 779 30 30 0 eblob
+3996 779 150 150 1 eblob
+3996 779 30 30 0 eblob
+2461 779 150 150 1 eblob
+2461 779 30 30 0 eblob
+2461 582 150 150 1 eblob
+2461 582 30 30 0 eblob
+2658 779 150 150 1 eblob
+2658 779 30 30 0 eblob
+2658 582 150 150 1 eblob
+2658 582 30 30 0 eblob
+1999 1376 120 120 1 eblob
+1999 1376 30 30 0 eblob
+1499 1376 120 120 1 eblob
+1499 1376 30 30 0 eblob
+2851 571 120 120 1 eblob
+2851 571 30 30 0 eblob
+2851 71 120 120 1 eblob
+2851 71 30 30 0 eblob
+4118 238 120 120 1 eblob
+4118 238 30 30 0 eblob
+3618 238 120 120 1 eblob
+3618 238 30 30 0 eblob
+3574 881 120 120 1 eblob
+3574 881 30 30 0 eblob
+3574 381 120 120 1 eblob
+3574 381 30 30 0 eblob
+3015 573 120 120 1 eblob
+3015 573 30 30 0 eblob
+3015 73 120 120 1 eblob
+3015 73 30 30 0 eblob
+3989 1541 120 120 1 eblob
+3989 1541 30 30 0 eblob
+3989 1041 120 120 1 eblob
+3989 1041 30 30 0 eblob
+2421 1486 120 120 1 eblob
+2421 1486 30 30 0 eblob
+2421 986 120 120 1 eblob
+2421 986 30 30 0 eblob
+532 1643 612 1643 612 1723 532 1723 4 1 pblob
+572 1683 25 25 0 eblob
+632 1643 712 1643 712 1723 632 1723 4 1 pblob
+672 1683 25 25 0 eblob
+732 1643 812 1643 812 1723 732 1723 4 1 pblob
+772 1683 25 25 0 eblob
+832 1643 912 1643 912 1723 832 1723 4 1 pblob
+872 1683 25 25 0 eblob
+932 1643 1012 1643 1012 1723 932 1723 4 1 pblob
+972 1683 25 25 0 eblob
+1032 1643 1112 1643 1112 1723 1032 1723 4 1 pblob
+1072 1683 25 25 0 eblob
+1132 1643 1212 1643 1212 1723 1132 1723 4 1 pblob
+1172 1683 25 25 0 eblob
+1232 1643 1312 1643 1312 1723 1232 1723 4 1 pblob
+1272 1683 25 25 0 eblob
+1332 1643 1412 1643 1412 1723 1332 1723 4 1 pblob
+1372 1683 25 25 0 eblob
+1432 1643 1512 1643 1512 1723 1432 1723 4 1 pblob
+1472 1683 25 25 0 eblob
+690 897 70 70 1 eblob
+690 897 25 25 0 eblob
+769 621 70 70 1 eblob
+769 621 25 25 0 eblob
+493 1526 70 70 1 eblob
+493 1526 25 25 0 eblob
+769 1447 70 70 1 eblob
+769 1447 25 25 0 eblob
+2696 1564 2776 1564 2776 1644 2696 1644 4 1 pblob
+2736 1604 25 25 0 eblob
+2796 1564 2876 1564 2876 1644 2796 1644 4 1 pblob
+2836 1604 25 25 0 eblob
+2896 1564 2976 1564 2976 1644 2896 1644 4 1 pblob
+2936 1604 25 25 0 eblob
+2996 1564 3076 1564 3076 1644 2996 1644 4 1 pblob
+3036 1604 25 25 0 eblob
+3096 1564 3176 1564 3176 1644 3096 1644 4 1 pblob
+3136 1604 25 25 0 eblob
+3196 1564 3276 1564 3276 1644 3196 1644 4 1 pblob
+3236 1604 25 25 0 eblob
+3296 1564 3376 1564 3376 1644 3296 1644 4 1 pblob
+3336 1604 25 25 0 eblob
+3396 1564 3476 1564 3476 1644 3396 1644 4 1 pblob
+3436 1604 25 25 0 eblob
+3496 1564 3576 1564 3576 1644 3496 1644 4 1 pblob
+3536 1604 25 25 0 eblob
+3596 1564 3676 1564 3676 1644 3596 1644 4 1 pblob
+3636 1604 25 25 0 eblob
+2776 1053 70 70 1 eblob
+2776 1053 25 25 0 eblob
+3091 1053 70 70 1 eblob
+3091 1053 25 25 0 eblob
+docstate restore
+
+%%Trailer
+%%BoundingBox: 0 0 356 175

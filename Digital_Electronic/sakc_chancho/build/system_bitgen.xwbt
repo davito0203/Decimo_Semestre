@@ -1,0 +1,7 @@
+INFILE=/home/cabas/SIE/SoftCore/lm32/logic/sakc/build/system-routed.ncd
+OUTFILE=/home/cabas/SIE/SoftCore/lm32/logic/sakc/build/system.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=/home/cabas/SIE/SoftCore/lm32/logic/sakc/build
+LICENSE=WebPack
+USER_INFO=0_0_0

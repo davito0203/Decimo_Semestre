@@ -1,0 +1,3 @@
+\select@language {spanish}
+\contentsline {section}{\numberline {1}Estructura mec\IeC {\'a}nica del brazo}{2}{section.1}
+\contentsline {section}{\numberline {2}Estructura mec\IeC {\'a}nica de la mu\IeC {\~n}eca}{2}{section.2}

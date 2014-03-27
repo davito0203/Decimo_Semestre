@@ -1,0 +1,68 @@
+//! **************************************************************************
+// Written by: Map M.81d on Wed Jun 20 18:07:19 2012
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "V10" LEVEL 1;
+COMP "rst" LOCATE = SITE "T10" LEVEL 1;
+COMP "data_front_panel<0>" LOCATE = SITE "V12" LEVEL 1;
+COMP "data_front_panel<1>" LOCATE = SITE "N10" LEVEL 1;
+COMP "data_front_panel<2>" LOCATE = SITE "T12" LEVEL 1;
+COMP "reloj_anodos<0>" LOCATE = SITE "N16" LEVEL 1;
+COMP "reloj_anodos<1>" LOCATE = SITE "N15" LEVEL 1;
+COMP "reloj_anodos<2>" LOCATE = SITE "P18" LEVEL 1;
+COMP "reloj_anodos<3>" LOCATE = SITE "P17" LEVEL 1;
+COMP "selector_front_panel<0>" LOCATE = SITE "K2" LEVEL 1;
+COMP "selector_front_panel<1>" LOCATE = SITE "K1" LEVEL 1;
+COMP "selector_front_panel<2>" LOCATE = SITE "L4" LEVEL 1;
+COMP "selector_front_panel<3>" LOCATE = SITE "L3" LEVEL 1;
+COMP "selector_front_panel<4>" LOCATE = SITE "J3" LEVEL 1;
+COMP "selector_front_panel<5>" LOCATE = SITE "J1" LEVEL 1;
+COMP "selector_front_panel<6>" LOCATE = SITE "K3" LEVEL 1;
+COMP "selector_front_panel<7>" LOCATE = SITE "K5" LEVEL 1;
+COMP "reloj_data<0>" LOCATE = SITE "M13" LEVEL 1;
+COMP "reloj_data<1>" LOCATE = SITE "L14" LEVEL 1;
+COMP "reloj_data<2>" LOCATE = SITE "N14" LEVEL 1;
+COMP "reloj_data<3>" LOCATE = SITE "M14" LEVEL 1;
+COMP "reloj_data<4>" LOCATE = SITE "U18" LEVEL 1;
+COMP "reloj_data<5>" LOCATE = SITE "U17" LEVEL 1;
+COMP "reloj_data<6>" LOCATE = SITE "T18" LEVEL 1;
+COMP "reloj_data<7>" LOCATE = SITE "T17" LEVEL 1;
+COMP "clk_ADC" LOCATE = SITE "L7" LEVEL 1;
+COMP "select_output_ADC<0>" LOCATE = SITE "G1" LEVEL 1;
+COMP "select_output_ADC<1>" LOCATE = SITE "J7" LEVEL 1;
+COMP "select_output_ADC<2>" LOCATE = SITE "J6" LEVEL 1;
+COMP "gpio0_in<0>" LOCATE = SITE "D9" LEVEL 1;
+COMP "gpio0_in<1>" LOCATE = SITE "B8" LEVEL 1;
+COMP "gpio0_in<2>" LOCATE = SITE "C4" LEVEL 1;
+COMP "switch_front_panel" LOCATE = SITE "P11" LEVEL 1;
+COMP "leds<0>" LOCATE = SITE "U16" LEVEL 1;
+COMP "leds<1>" LOCATE = SITE "V16" LEVEL 1;
+COMP "leds<2>" LOCATE = SITE "U15" LEVEL 1;
+COMP "leds<3>" LOCATE = SITE "V15" LEVEL 1;
+COMP "leds<4>" LOCATE = SITE "M11" LEVEL 1;
+COMP "leds<5>" LOCATE = SITE "N11" LEVEL 1;
+COMP "leds<6>" LOCATE = SITE "R11" LEVEL 1;
+COMP "leds<7>" LOCATE = SITE "T11" LEVEL 1;
+COMP "oec_ADC" LOCATE = SITE "H3" LEVEL 1;
+COMP "interruptors_fpga<1>" LOCATE = SITE "T9" LEVEL 1;
+COMP "interruptors_fpga<2>" LOCATE = SITE "V9" LEVEL 1;
+COMP "interruptors_fpga<3>" LOCATE = SITE "M8" LEVEL 1;
+COMP "interruptors_fpga<4>" LOCATE = SITE "N8" LEVEL 1;
+COMP "interruptors_fpga<5>" LOCATE = SITE "U8" LEVEL 1;
+COMP "interruptors_fpga<6>" LOCATE = SITE "V8" LEVEL 1;
+COMP "interruptors_fpga<7>" LOCATE = SITE "T5" LEVEL 1;
+COMP "start_ADC" LOCATE = SITE "K6" LEVEL 1;
+COMP "uart_rxd" LOCATE = SITE "N17" LEVEL 1;
+COMP "uart_txd" LOCATE = SITE "N18" LEVEL 1;
+COMP "data_output_ADC<0>" LOCATE = SITE "G11" LEVEL 1;
+COMP "data_output_ADC<1>" LOCATE = SITE "F10" LEVEL 1;
+COMP "data_output_ADC<2>" LOCATE = SITE "F11" LEVEL 1;
+COMP "data_output_ADC<3>" LOCATE = SITE "E11" LEVEL 1;
+COMP "data_output_ADC<4>" LOCATE = SITE "D12" LEVEL 1;
+COMP "data_output_ADC<5>" LOCATE = SITE "C12" LEVEL 1;
+COMP "data_output_ADC<6>" LOCATE = SITE "F12" LEVEL 1;
+COMP "data_output_ADC<7>" LOCATE = SITE "E12" LEVEL 1;
+NET "clk_BUFGP/IBUFG" PERIOD = 20 ns HIGH 50%;
+SCHEMATIC END;
+

@@ -1,0 +1,89 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+bram             0x00000000         0x00004000
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+                0x00000000                __DYNAMIC = 0x0
+                0x00000000                _BRAM_START = 0x0
+                0x00004000                _BRAM_SIZE = 0x4000
+                0x00004000                _BRAM_END = (_BRAM_START + _BRAM_SIZE)
+
+.text           0x00000000      0xca0
+                0x00000000                _ftext = .
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x00000000       0x8c crt0ram.o
+                0x00000000                _start
+                0x00000060                irq_enable
+                0x0000006c                irq_mask
+                0x00000078                irq_disable
+                0x00000084                jump
+                0x00000088                halt
+ .text          0x0000008c      0xa50 main.o
+                0x0000008c                uart_get_putint
+                0x0000010c                update_display_state
+                0x000001f4                update_display_criticall
+                0x00000354                update_display_criticalh
+                0x000004b4                main
+ .text          0x00000adc      0x1c4 soc-hw.o
+                0x00000adc                sleep
+                0x00000b5c                tic_init
+                0x00000bac                uart_init
+                0x00000bc0                uart_getchar
+                0x00000c08                uart_putchar
+                0x00000c54                uart_putstr
+                0x00000ca0                _etext = .
+
+.rodata         0x00000ca0      0x114
+                0x00000ca0                . = ALIGN (0x4)
+                0x00000ca0                _frodata = .
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata        0x00000ca0      0x114 main.o
+ *(.rodata1)
+                0x00000db4                _erodata = .
+
+.data           0x00000db4       0x14
+                0x00000db4                . = ALIGN (0x4)
+                0x00000db4                _fdata = .
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x00000db4        0x0 crt0ram.o
+ .data          0x00000db4        0x8 main.o
+                0x00000db4                ADC0
+                0x00000db8                display0
+ .data          0x00000dbc        0xc soc-hw.o
+                0x00000dbc                uart0
+                0x00000dc0                timer0
+                0x00000dc4                gpio0
+ *(.data1)
+                0x00000dd0                _gp = ALIGN (0x10)
+ *(.sdata .sdata.* .gnu.linkonce.s.*)
+                0x00000dc8                _edata = .
+
+.bss            0x00000dc8        0x4
+                0x00000dc8                . = ALIGN (0x4)
+                0x00000dc8                _fbss = .
+ *(.dynsbss)
+ *(.sbss .sbss.* .gnu.linkonce.sb.*)
+ *(.scommon)
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x00000dc8        0x0 crt0ram.o
+ .bss           0x00000dc8        0x0 main.o
+ .bss           0x00000dc8        0x4 soc-hw.o
+                0x00000dc8                msec
+ *(COMMON)
+                0x00000dcc                _ebss = .
+                0x00000dcc                _end = .
+                0x00003ffc                PROVIDE (_fstack, ((ORIGIN (bram) + 0x4000) - 0x4))
+LOAD crt0ram.o
+LOAD main.o
+LOAD soc-hw.o
+OUTPUT(image elf32-lm32)
+
+.comment        0x00000000       0x27
+ .comment       0x00000000       0x27 main.o
+                                 0x28 (size before relaxing)
+ .comment       0x00000000       0x28 soc-hw.o

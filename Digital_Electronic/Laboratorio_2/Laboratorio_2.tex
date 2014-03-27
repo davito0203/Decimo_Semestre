@@ -1,0 +1,315 @@
+\documentclass[twocolumn]{IEEEtran}
+\usepackage{graphicx}
+\usepackage[utf8x]{inputenc}
+\usepackage{times}
+\usepackage{amssymb,amsfonts}
+\usepackage[tbtags]{amsmath}
+\usepackage{pict2e}
+\usepackage{float}
+\usepackage[all]{xy}
+\usepackage{graphics,graphicx,color,colortbl}
+\usepackage{times}
+\usepackage{subfigure}
+\usepackage{wrapfig}
+\usepackage{multicol}
+\usepackage{colortbl}
+\usepackage{cite}
+\usepackage{url}
+\usepackage[tbtags]{amsmath}
+\usepackage{amsmath,amssymb,amsfonts,amsbsy}
+\usepackage{bm}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{listings}
+\usepackage[centerlast, small]{caption}
+\usepackage[colorlinks=true, citecolor=blue, linkcolor=black, urlcolor=blue, breaklinks=true]{hyperref}
+\hyphenation{ele-men-tos he-rra-mi-en-ta cons-tru-yen trans-fe-ren-ci-a pro-pu-es-tas si-mu-lar vi-sua-li-za-cion}
+
+\begin{document}
+\title{Lenguaje Ensamblador y la arquitectura MIPS}
+\author{José Alejandro Logreira Ávila Código: $261722$\\
+	David Ricardo Martínez Hernández Código: $261931$\\
+	Edwin Fernando Pineda Vargas Código: $262100$}
+\maketitle
+\markboth{Universidad Nacional de Colombia}{}
+\floatname{algorithm}{Algoritmo}
+\begin{keywords}
+Assembly, Lenguaje, Mips32, Multiplicación QtSpim, Suma.
+\end{keywords}
+\begin{abstract}
+SPIM es uno de los simuladores de lenguaje ensamblador con que contamos actualmente. Mediante esta práctica, aprenderemos a utilizarlo, de tal forma que a futuro le podamos usar como herramienta en el desarrollo del proyecto de final de curso.
+\end{abstract}
+
+\section{Objetivo General}
+\begin{itemize}
+ \item Programar una aplicación en lenguaje ensamblador con el set de instrucciones de MIPS32 usando el simulador Spim.
+\end{itemize}
+
+\section{Objetivos Específicos}
+\begin{itemize}
+ \item Entender el proceso de compilación de lenguaje de alto nivel y de lenguaje ensamblador.
+ \item Programar una aplicación funcional usando el simulador Spim desarrollada en el lenguaje ensamblador.
+\end{itemize}
+
+\section{Introducción}
+\noindent
+Actualmente los simuladores son de gran ayuda para la implementación de proyectos, ya que estos ofrecen una evaluación completa a bajo costo y sin exponer equipos ni personal para su desarrollo. En nuestro caso en particular, aprenderemos a utilizar el simulador SPIM, el cual nos permite simular programas en lenguaje ensamblador, de tal forma que podamos implementarlos a futuro en una FPGA u otro hardware que así lo soporte.
+
+\section{Materiales}
+\begin{itemize}
+ \item Cable serial.
+ \item Computador con Sistema Operativo Linux Ubuntu con Spim instalado.
+ \item FPGA.
+ \item Cable USB a mini USB.
+\end{itemize}
+
+\section{Procedimiento}
+\noindent
+\subsection{MIPS32 Y SPIM}
+\noindent
+\subsubsection{Archivos assembly de QTSPIM}
+\noindent
+Los archivos que contienen el código assembly (denotados con la extensión .s), son archivos de texto plano, que contienen todas las instrucciones y directivas a usar en el ensamblado del programa final para la arquitectura de procesadores MIPS. Estos archivos se pueden crear fácilmente usando el editor de textos “Gedit”, y guardando el archivo con la respectiva extensión \textit{.S}. Por supuesto, el código assembly debe respetar cierta sintaxis y cierta organización del código, que es común para cualquier tipo de arquitectura de procesadores. Si existen errores en el código assembly, el simulador de MIPS lo hará saber al hallar errores en la compilación del código escrito en Gedit.\\
+\noindent
+La interfaz de QTSpim es una interfaz gráfica, y además muy intuitiva, que permite reconocer fácilmente las funcionalidades del simulador. Para cargar un archivo \textit{.S} para simulación, basta con ir a la pestaña de Archivo, y seleccionar la opción Cargar Archivo. En el buscador de archivos que aparece, solo son visibles los archivos con extensión \textit{.S}.
+
+\subsubsection{Interfaz de QTSpim}
+\noindent
+La sección principal de la interfaz es la ventana que contiene el código assembly a simular, dividido por secciones, es decir, divide el código assembly cargado en una sección de “datos” que es el espacio de memoria donde se guardan las múltiples variables a usar en el programa. Se puede entender como el espacio de memoria RAM del sistema. Allí se encuentra la sección de RAM destinada para el usuario, la destinada para el Stack, y la destinada para las instrucciones de núcleo. Su organización es por columnas, donde la primera de ellas es la dirección de memoria de los datos mostrados a continuación, y las siguientes columnas son los datos en sí mismos, mostrados en base hexadecimal y en la última columna, mostrados en código ASCII (Caracteres). \\
+Otra sección importante de la ventana del código assembly es la de “Texto”, o datos permanentes. Estos son los datos que se han de escribir en la memoria de programa, es decir, las instrucciones del programa a ejecutar. Se puede entender como la memoria ROM o no ­volati. Allí se encuentran también distintas secciones que son: la sección de “texto del usuario”, que es una traducción del programa escrito en Gedit a unas instrucciones base que usa el QTSpim para su simulación; la sección de “texto del núcleo”, que es una nueva traducción del programa escrito en Gedit, pero con las instrucciones de núcleo del simulador.\\
+A la izquierda de la sección principal, se encuentra una ventana que despliega los registros del procesador, tanto los 32 registros del banco de registros, como los registros de propósito especial, y los registros de la unidad de punto flotante.\\
+Finalmente, en la parte superior del simulador se encuentran los botones de simulación y depuración del programa paso a paso, reiniciar el programa, pausarlo, terminarlo, etc.
+
+\subsubsection{Set de instrucciones para QTSpim}
+\noindent
+QTSpim es un simulador únicamente para la arquitectura MIPS32 en su primera versión, que es una de las varias arquitecturas MIPS. El set de instrucciones para MIPS32 contiene una rica cantidad de instrucciones (más de 150), incluyendo un extenso repertorio de instrucciones para operar números en punto flotante. Sin embargo, muchas de estas instrucciones son virtuales (o pseudoinstrucciones), y adicionalmente, la primera edición del ISA para MIPS32 no incluía una significativa cantidad de instrucciones que se han adicionado en posteriores ediciones.\\
+En el anexo A de este informe se incluye un resumen del ISA soportado por QTSpim.
+
+\subsection{El proceso de Compilación}
+\noindent
+\subsubsection{¿Cómo es el proceso de compilación?}
+\noindent
+Un compilador convierte un código de programación de un alto nivel de abstracción a un  nivel bajo que es el código assembly. Existe un compilador para cada arquitectura de procesadores (ISA), precisamente porque cada procesador ha de manejar su propio set de instrucciones particular, que el compilador necesita conocer específicamente para cada arquitectura. Los compiladores hoy en día presentan un gran desarrollo y usan algoritmos de traducción de instrucciones de alto a bajo nivel muy eficientes, lo que permite obtener programas más pequeños y que se ejecutan más rápido.\\
+Compilar un programa, en términos generales, significa generar un archivo ejecutable que desarrolle todas las funcionalidades que se programaron en el código de alto nivel. Para llegar a obtener solo un archivo ejecutable, se ha de pasar por varios procesos de traducción de código.
+
+\subsubsection{¿Qué es un linker?}
+\noindent
+Un programa puede estar compuesto por múltiples archivos fuente (o módulos) que se encuentran separados entre sí. Cuando el compilador traduce cada archivo fuente (en lenguaje de alto nivel) a archivos en código ensamblador, se necesita un mecanismo para unir estos archivos fuente (ahora traducidos a assembly), y generar un único archivo fuente que sea la unión de todos los módulos de manera adecuada. Esta es la función del programa enlazador.\\
+En términos más específicos:
+\begin{itemize}
+ \item Busca las librerías a usar en el programa.
+ \item Determina las posiciones de memoria de cada módulo a enlazar, y el espacio que cada uno de estos va a ocupar. Reacomoda las instrucciones debidamente ajustando las referencias absolutas.
+ \item Resolviendo las referencias relativas entre los distintos archivos objeto.
+\end{itemize}
+
+\subsubsection{¿Qué es un archivo objeto?}
+\noindent
+Los archivos objeto contienen el código ensamblador del programa a compilar, junto con toda la información necesaria para enlazar un archivo o módulo de programa con los demás. Estos archivos contienen 6 secciones:
+\begin{enumerate}
+ \item El encabezado: describe el tamaño y posición de las demás secciones del archivo.
+ \item El segmento de texto: contiene el lenguaje de máquina para rutinas en el archivo fuente. Estas rutinas son aún imposibles de ejecutar porque sus referencias a procedimientos externos no han sido resueltas.
+ \item La sección de datos: contiene la representación binaria de los datos en el archivo fuente. El dato también ha de estar incompleto porque su referencias a otros archivos no han sido resueltas.
+ \item La información de relocalización: identifica las instrucciones y los datos que dependen de direcciones absolutas.
+ \item La tabla de símbolos: asocia direcciones con etiquetas externas en el archivo fuente, y lista las referencias sin resolver.
+ \item La información de depuración: contiene una descripción de la forma en que el programa fue compilado, tal que un depurador pueda encontrar qué dirección de instrucción corresponde a lineas de código en el archivo fuente, e imprime las estructuras de datos en una forma legible.
+\end{enumerate}
+
+\subsection{Lenguaje ensamblador, subrutinas e interrupciones}
+\subsubsection{Lenguaje Ensamblador}
+\noindent
+Es un estándar que establece el formato y la sintaxis de escritura de las instrucciones de máquina, para cualquier arquitectura de procesadores. El lenguaje ensamblador no es un lenguaje propiamente dicho, en tanto que el set de instrucciones es único para cada tipo de procesador, y por tanto, las instrucciones usadas en el código ensamblador son solo reconocibles por el procesador respectivo que reconoce tales instrucciones.\\
+Por tal motivo, el código ensamblador se puede entender mejor como un conjunto estándar de directrices y sintaxis de las instrucciones, que se debe respetar cuando se desee escribir un programa para cualquier tipo de procesador.\\
+La sintaxis y el formato del código ensamblador definen una serie de reglas a seguir, tal que el programa ensamblador reconozca que tipo de comando se desea ejecutar. El formato define una organización por columnas, donde según la posición del comando escrito, es interpretado como una directriz, una etiqueta, una instrucción, un operando o un comentario. La sintaxis determina el orden de escritura de las instrucciones, esto es, el orden de los operandos y los mnemónicos de cada instrucción.
+
+\subsubsection{Ensamblador VS Alto nivel}
+\noindent
+Un lenguaje ensamblador es la primera abstracción que existe en el mundo del código de máquina, es decir, las instrucciones que se escriben en el código ensamblador son exactamente la representación en mnemónicos del código binario que representan, y que han de ser ejecutadas tal cual se escriben por el procesador que las implemente.\\
+Un lenguaje de alto nivel es un lenguaje mucho más entendible para el ser humano (human readable) en cuanto al significado de las instrucciones que se desean realizar. Su sintaxis es mucho más compleja que el código ensamblador y sus directivas son mucho más diversas y complejas. No tiene el mismo enfoque de programación que el assembly, sus operaciones no están diseñadas para conocer si se trabaja sobre registros o sobre la memoria. Implementa funciones y subrutinas mucho más complejas. No está orientado a conocer el set de instrucciones del procesador a usar, de hecho, no es necesario conocer el procesador. Requiere de compiladores para traducir el código a código de máquina. etc.
+
+\subsubsection{Subrutinas}
+\noindent
+Son procedimientos que pueden ser definidos en una sección aparte del código principal, y que son usados con el propósito de “ahorrar código”. Existen tareas que pueden ser repetitivas en la ejecución de un programa, por lo que en el momento que necesiten ser ejecutadas, sólo basta hacer un llamado a tal rutina y la ejecución del programa rompe su esquema secuencial (linea por linea), y salta a la rutina llamada, ejecutando la tarea deseada, tantas veces como sea necesario, y regresar nuevamente a la ejecución del programa principal.
+
+\subsubsection{Interrupción}
+\noindent
+Es una señal de ruptura de la ejecución normal de un programa, originada por un evento interno o externo al procesador que necesita ser atendido inmediatamente, antes de continuar con la ejecución principal del código. Las interrupciones se asocian a la ejecución de un segmento de código que resuelve el evento que originó la interrupción y luego retorna a la ejecución secuencial normal. Comúnmente denominados “exception handlers”.
+
+\subsubsection{“Hello World” en assembly}
+\noindent
+Código que imprime en consoloa “Hello World”, usando la directiva system call:
+\lstset{numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=1pt}
+\begin{lstlisting}[firstnumber=7, caption=Codigo inicial, label=code1]
+.data    msg:   .asciiz "Hello World"
+.text
+main:   li $v0, 4     # syscall 4 (print_str)
+	la $a0, msg   # argument: string
+	syscall       # print the string
+\end{lstlisting}
+
+\subsection{Aplicación del lenguaje ensamblador en SPIM}
+\noindent
+\subsubsection{Algoritmo de la multiplicación}
+\noindent
+El algoritmo que se diseñó para la multiplicación es:
+
+\lstset{numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=1pt}
+\begin{lstlisting}[firstnumber=7, caption=Codigo inicial, label=code1]
+##########################################
+# ALGORITMO DE LA MULTIPLICACION POR SUMAS
+# SUCESIVAS
+# SIGNED INTEGER
+# MAX VALUE: (2^31) - 1 =  2.147'483.647
+# MIN VALUE: (-2^31)    = -2.147'483.648
+
+.data
+
+multiplicando: .asciiz "ingrese el multi
+plicando\n";
+multiplicador: .asciiz "ingrese el multi
+picador\n";
+producto: .asciiz "el producto es: \n";
+endline: .asciiz "\n";
+
+.text
+
+init:
+
+	add $a0,$zero,$zero
+	add $v0,$zero,$zero
+	add $v1,$zero,$zero
+	add $t0,$zero,$zero
+	add $s0,$zero,$zero
+	add $s1,$zero,$zero
+	add $s2,$zero,$zero
+
+main:
+
+##########################################
+#### Carga inicial de operandos ##########
+##########################################
+
+la $a0, multiplicando  # carga en a0 la 
+# direccion del label "multiplicando"
+li $v0, 4              # carga en v0 
+# el inmediato de 32 bits
+syscall                # llamada al 
+# sistema No 4: print string: passes a 
+# pointer to a null-terminated string 
+
+li $v0,5               # carga en v0 el 
+# inmediato de 32 bits
+syscall                # llamada al siste
+# ma No 5: read int, read float, and read 
+# double read an entire line of input up 
+# to and including a newline. El valor
+# leido lo almacena en v0
+
+move $s0,$v0           # pasa a s0 el 
+# valor leido
+
+la $a0, multiplicador  # carga en a0 la 
+# direccion del label "divisor"
+li $v0, 4              # carga en v0 el 
+# inmediato de 32 bits
+syscall                # llamada al sistema
+# No 4: print string: passes a pointer to 
+# a null-terminated string 
+
+li $v0,5               # carga en v0 el in
+# mediato de 32 bits
+syscall                # llamada al siste
+# ma No 5: read int, read float, and read
+# double read an entire line of input up 
+# to and 
+                       # including a new
+# line. El valor leido lo almacena en v0
+
+move $s1,$v0           # pasa a s1 el valor
+# leido
+
+##########################################
+#### Algoritmo por sumas sucesivas #######
+##########################################
+
+#--- Verificacion de operandos en cero---#
+
+        beq $s0,$zero,cero
+        beq $s1,$zero,cero
+
+#------ Sumas sucesivas -----------------#
+
+	move $s2,$s0               # mueve
+# el multiplicando a s3, donde se acumula 
+# el resultado
+ 
+loop:
+
+add  $s1,$s1,-1            # resta 1 al mul
+# tiplicador
+slti $t0,$s1,1             # compara si el
+# multiplicador ahora esta en cero
+bne  $t0,$zero,resultado   # si t0 = 1, es
+# decir, si el multiplicador es igual a ce
+# ro, que salte
+	
+add  $s2,$s2,$s0           # acumula en el
+# registro de respuesta las sumas sucesivas
+j loop
+
+#----------------------------------------#
+
+cero:
+	
+	move $s2,$zero
+	j resultado
+
+#------- Impresion de resultado ---------#
+
+resultado:
+
+	la $a0, producto       # carga en  
+# a0 la direccion del label "multiplicando"
+	li $v0, 4              # carga en
+# v0 el inmediato de 32 bits
+	syscall                # llamada 
+# al sistema No 4: print string: passes a
+# pointer to a null-terminated string 
+
+	move $a0,$s2           # mueve
+# el resultado a a0
+	li $v0, 1              # Llamada 
+# al sistema No 1: print int: passes an 
+#integer and prints it on the console. 
+	syscall
+
+	la $a0, endline        # carga en 
+# a0 la direccion del label "endline"
+	li $v0, 4              # carga en 
+# v0 el inmediato de 32 bits
+	syscall                # llamada 
+# al sistema No 4: print string: passes a 
+# pointer to a null-terminated string 
+
+	j main                 # repeti
+# cion infinita del algoritmo
+\end{lstlisting}
+
+\section{Conclusiones}
+\begin{itemize}
+ \item  El lenguaje ensamblador es de gran ayuda a la hora de conocer cuales son los pasos que el procesador ejecuta para completar cierta tares. El simulador QTSPIM provee de herramientas de depuración como la ejecución paso a paso, que permiten identificar claramente los errores de programas y algoritmos implementados. Sus múltiples ventanas de visualización de memoria y registros fueron la solución para seguir la pista del flujo de información desde la memoria hacia los registros, y de estos hacia las unidades de ejecución y reescritura.
+ \item Una mejor comprensión del proceso de creación del archivo de memoria que se ha de guardar en la ROM de la FPGA, permite comprender con mayor claridad las diferentes secciones que se pueden definir con las directrices del código assembly, tales como .text, .data, .word, etc, y las características de la información y datos que van en cada sección.
+\end{itemize}
+
+\bibliographystyle{ieeetran}
+\begin{thebibliography}{99}
+\bibitem{patterson} Patterson, David \& Hennessy John
+{\em "`Computer Organization And Design - The Hardware-Software Interface"'}.
+Kindle Edition, Fourth Edition, 2006.
+
+\bibitem{page1} \url{http://www.latticesemi.com/products/intellectualproperty/ipcores/mico32/index.cfm}
+
+\bibitem{page1} \url{http://www.ohwr.org/documents/68}
+
+\bibitem{page1} \url{http://www.linuxencaja.net/wiki/Arquitectura_LM32_JPRR_%28261744%29}
+\end{thebibliography}
+\end{document}

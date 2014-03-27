@@ -1,0 +1,20 @@
+4.25.1
+Instruction 1 Instruction 2
+a. Overflow (EX)                                Invalid target address (EX)
+b. Invalid data address (MEM)          No exceptions
+ 
+4.25.2
+The Mux that selects the next PC must have inputs added to it. Each input
+is a constant address of an exception handler. The exception detectors must be
+added to the appropriate pipeline stage and the outputs of these detectors must be
+used to control the pre-PC Mux, and also to convert to nops instructions that are
+already in the pipeline behind the exception-triggering instruction.
+ 
+4.25.3
+Instructions are fetched normally until the exception is detected. When the
+exception is detected, all instructions that are in the pipeline after the first instruction
+must be converted to nops. As a result, the second instruction never completes
+and does not affect pipeline state. In the cycle that immediately follows the
+cycle in which the exception is detected, the processor will fetch the fi rst instruction
+of the exception handler.
+ 

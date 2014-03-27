@@ -1,0 +1,86 @@
+# ==== Clock inputs (CLK) ====
+NET "clk" LOC = "V10";
+NET "clk" PERIOD = 20 HIGH 50%;
+/*NET  led  LOC = "U16";*/
+#NET  rst  LOC = "A8";
+NET  rst  LOC = "T10";
+
+# ==== UART ====
+NET "uart_rxd" LOC = "N17";
+NET "uart_txd" LOC = "N18";
+
+# ==== CONTROL ====
+
+#NET "interruptors_fpga[0]" LOC = "T10";
+NET interruptors_fpga<1> LOC = "T9";
+NET interruptors_fpga<2> LOC = "V9";
+NET interruptors_fpga<3> LOC = "M8";
+NET interruptors_fpga<4> LOC = "N8";
+NET interruptors_fpga[5] LOC = "U8";
+NET interruptors_fpga[6] LOC = "V8";
+NET interruptors_fpga[7] LOC = "T5";
+
+NET "leds[0]" LOC = "U16";
+NET "leds[1]" LOC = "V16";
+NET "leds[2]" LOC = "U15";
+NET "leds[3]" LOC = "V15";
+NET "leds[4]" LOC = "M11";
+NET "leds[5]" LOC = "N11";
+NET "leds[6]" LOC = "R11";
+NET "leds[7]" LOC = "T11";
+
+# ==== FRONT PANEL ====
+
+NET "selector_front_panel[0]" LOC = "K2";
+NET "selector_front_panel[1]" LOC = "K1";
+NET "selector_front_panel[2]" LOC = "L4";
+NET "selector_front_panel[3]" LOC = "L3";
+NET "selector_front_panel[4]" LOC = "J3";
+NET "selector_front_panel[5]" LOC = "J1";
+NET "selector_front_panel[6]" LOC = "K3";
+NET "selector_front_panel[7]" LOC = "K5";
+
+NET "data_front_panel[2]" LOC = "T12";
+NET "data_front_panel[0]" LOC = "V12";
+NET "data_front_panel[1]" LOC = "N10";
+NET "switch_front_panel" LOC = "P11";
+
+
+# ==== ADC ====
+
+NET "data_output_ADC[0]" LOC = "G11";
+NET "data_output_ADC[1]" LOC = "F10";
+NET "data_output_ADC[2]" LOC = "F11";
+NET "data_output_ADC[3]" LOC = "E11";
+NET "data_output_ADC[4]" LOC = "D12";
+NET "data_output_ADC[5]" LOC = "C12";
+NET "data_output_ADC[6]" LOC = "F12";
+NET "data_output_ADC[7]" LOC = "E12";
+
+NET "select_output_ADC[0]" LOC = "G1";
+NET "select_output_ADC[1]" LOC = "J7";
+NET "select_output_ADC[2]" LOC = "J6";
+
+NET "oec_ADC"  LOC = "H3";
+NET "clk_ADC"  LOC = "L7";
+NET "start_ADC" LOC = "K6";
+#===== GPIO =====
+
+NET "gpio0_in[0]" LOC = "D9";
+NET "gpio0_in[1]" LOC = "B8";
+NET "gpio0_in[2]" LOC = "C4";
+
+NET "reloj_data[7]" LOC = "T17";
+NET "reloj_data[6]" LOC = "T18";
+NET "reloj_data[5]" LOC = "U17";
+NET "reloj_data[4]" LOC = "U18";
+NET "reloj_data[3]" LOC = "M14";
+NET "reloj_data[2]" LOC = "N14";
+NET "reloj_data[1]" LOC = "L14";
+NET "reloj_data[0]" LOC = "M13";
+
+NET "reloj_anodos[0]" LOC = "N16";
+NET "reloj_anodos[1]" LOC = "N15";
+NET "reloj_anodos[2]" LOC = "P18";
+NET "reloj_anodos[3]" LOC = "P17";
+

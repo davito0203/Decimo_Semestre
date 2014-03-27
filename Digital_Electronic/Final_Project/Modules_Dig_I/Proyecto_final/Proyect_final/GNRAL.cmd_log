@@ -1,0 +1,6 @@
+xst -ise "C:/Documents and Settings/USER/Escritorio/FINAL/FINAL.ise" -intstyle ise -ifn "C:/Documents and Settings/USER/Escritorio/FINAL/GNRAL.xst" -ofn "C:/Documents and Settings/USER/Escritorio/FINAL/GNRAL.syr"
+ngdbuild -ise "C:/Documents and Settings/USER/Escritorio/FINAL/FINAL.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc3s200-ft256-5 "GNRAL.ngc" GNRAL.ngd
+map -ise "C:/Documents and Settings/USER/Escritorio/FINAL/FINAL.ise" -intstyle ise -p xc3s200-ft256-5 -cm area -pr off -k 4 -c 100 -o GNRAL_map.ncd GNRAL.ngd GNRAL.pcf
+par -ise "C:/Documents and Settings/USER/Escritorio/FINAL/FINAL.ise" -w -intstyle ise -ol std -t 1 GNRAL_map.ncd GNRAL.ncd GNRAL.pcf
+trce -ise "C:/Documents and Settings/USER/Escritorio/FINAL/FINAL.ise" -intstyle ise -e 3 -s 5 -xml GNRAL GNRAL.ncd -o GNRAL.twr GNRAL.pcf -ucf GNRAL.ucf
+bitgen -ise "C:/Documents and Settings/USER/Escritorio/FINAL/FINAL.ise" -intstyle ise -f GNRAL.ut GNRAL.ncd

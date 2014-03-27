@@ -1,0 +1,40 @@
+# ==== Clock inputs (CLK) ====
+NET "clk" LOC = "P38";
+NET "clk" PERIOD = 20 HIGH 50%;
+NET  led  LOC = "P44";
+NET  rst  LOC = "P30";
+
+# ==== UART ====
+NET "uart_rxd" LOC = "P68";
+NET "uart_txd" LOC = "P67";
+
+#ADDRESS BUS
+NET "addr<12>" LOC = "P90";
+NET "addr<11>" LOC = "P91";
+NET "addr<10>" LOC = "P85";
+NET "addr<9>" LOC = "P92";
+NET "addr<8>" LOC = "P94";
+NET "addr<7>" LOC = "P95";
+NET "addr<6>" LOC = "P98";
+NET "addr<5>" LOC = "P3";
+NET "addr<4>" LOC = "P2";
+NET "addr<3>" LOC = "P78";
+NET "addr<2>" LOC = "P79";
+NET "addr<1>" LOC = "P83";
+NET "addr<0>" LOC = "P84";
+
+#DATA BUS
+NET "sram_data<7>"  LOC = "P4";
+NET "sram_data<6>"  LOC = "P5";
+NET "sram_data<5>"  LOC = "P9";
+NET "sram_data<4>"  LOC = "P10";
+NET "sram_data<3>"  LOC = "P11";
+NET "sram_data<2>"  LOC = "P12";
+NET "sram_data<1>"  LOC = "P15";
+NET "sram_data<0>"  LOC = "P16";
+
+#CONTROL BUS
+
+NET "nwe"   LOC = "P88";
+NET "noe"   LOC = "P86";
+NET "ncs"   LOC = "P69";

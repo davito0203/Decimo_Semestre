@@ -1,0 +1,31 @@
+//! **************************************************************************
+// Written by: Map K.31 on Sun Nov 21 21:55:58 2010
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "c<0>" LOCATE = SITE "B11" LEVEL 1;
+COMP "c<1>" LOCATE = SITE "B10" LEVEL 1;
+COMP "c<2>" LOCATE = SITE "A8" LEVEL 1;
+COMP "c<3>" LOCATE = SITE "A7" LEVEL 1;
+COMP "datolcd<0>" LOCATE = SITE "M10" LEVEL 1;
+COMP "datolcd<1>" LOCATE = SITE "P9" LEVEL 1;
+COMP "datolcd<2>" LOCATE = SITE "K4" LEVEL 1;
+COMP "datolcd<3>" LOCATE = SITE "G3" LEVEL 1;
+COMP "datolcd<4>" LOCATE = SITE "L4" LEVEL 1;
+COMP "datolcd<5>" LOCATE = SITE "M3" LEVEL 1;
+COMP "datolcd<6>" LOCATE = SITE "M4" LEVEL 1;
+COMP "datolcd<7>" LOCATE = SITE "N3" LEVEL 1;
+COMP "rs" LOCATE = SITE "H4" LEVEL 1;
+COMP "enable" LOCATE = SITE "F3" LEVEL 1;
+COMP "seg<0>" LOCATE = SITE "P13" LEVEL 1;
+COMP "seg<1>" LOCATE = SITE "N12" LEVEL 1;
+COMP "seg<2>" LOCATE = SITE "P12" LEVEL 1;
+COMP "seg<3>" LOCATE = SITE "P11" LEVEL 1;
+COMP "fila<0>" LOCATE = SITE "B12" LEVEL 1;
+COMP "fila<1>" LOCATE = SITE "A10" LEVEL 1;
+COMP "fila<2>" LOCATE = SITE "A9" LEVEL 1;
+COMP "fila<3>" LOCATE = SITE "B8" LEVEL 1;
+COMP "clk" LOCATE = SITE "T9" LEVEL 1;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

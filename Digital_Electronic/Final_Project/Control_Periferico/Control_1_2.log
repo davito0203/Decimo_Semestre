@@ -1,0 +1,8 @@
+# Writing all output to: Z:\home\davito\Documents\UNAL\Decimo_Semestre\Digital_Electronic\Final_Project\Control_Periferico\Control_1_2.log
+set pad_wire_necking on
+bus diagonal
+fanout 5
+route 50
+clean 2
+route 50 16
+clean 2

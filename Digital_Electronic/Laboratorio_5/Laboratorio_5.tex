@@ -1,0 +1,73 @@
+\documentclass[twocolumn]{IEEEtran}
+\usepackage{graphicx}
+\usepackage[utf8x]{inputenc}
+\usepackage{times}
+\usepackage{amssymb,amsfonts}
+\usepackage[tbtags]{amsmath}
+\usepackage{cite}
+\usepackage{pict2e}
+\usepackage{float}
+\usepackage{lscape}
+\usepackage[all]{xy}
+\usepackage{graphics,graphicx,color,colortbl}
+\usepackage{times}
+\usepackage{subfigure}
+\usepackage{wrapfig}
+\usepackage{multicol}
+\usepackage{cite}
+\usepackage{url}
+\usepackage[tbtags]{amsmath}
+\usepackage{amsmath,amssymb,amsfonts,amsbsy}
+\usepackage{listings}
+\usepackage{bm}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage[centerlast, small]{caption}
+\usepackage[colorlinks=true, citecolor=blue, linkcolor=blue, urlcolor=blue, breaklinks=true]{hyperref}
+\hyphenation{ele-men-tos he-rra-mi-en-ta cons-tru-yen trans-fe-ren-ci-a pro-pu-es-tas si-mu-lar vi-sua-li-za-cion}
+
+\begin{document}
+\title{Comparación de aplicaciones en Hardware y Software}
+\author{José Alejandro Logreira Ávila Código: $261722$\\
+	David Ricardo Martínez Hernández Código: $261931$\\
+	Edwin Fernando Pineda Vargas Código: $262100$}
+\maketitle
+\markboth{Universidad Nacional de Colombia}{}
+\floatname{algorithm}{Algoritmo}
+\begin{keywords}
+GPIO, led, LM32, periférico, wishbone.
+\end{keywords}
+\begin{abstract}
+ En esta práctica se busca conocer el protocolo de interconexión wishbone para su uso con el procesador LM32.
+\end{abstract}
+
+\section{Introducción}
+\noindent
+El protocolo de comunicación wishbone, es el que permite como su nombre lo indica, una comunicación entre la FPGA y periféricos como UART, SPI, GPIO entre otros.
+
+\section{Control de led con el procesador LM32}
+\noindent
+Se realizó el control de led con el procesador utilizando el wishbone y el GPIO.
+
+\section{Conexión Periférico - Procesador LM32}
+\noindent
+Se realizó la conexión del periférico requerido en nuestro proyecto final, el cual consiste en controlar una serie de motores mediante un joystic que se diseñó para poder realizar esta tarea. Para ello, se utilizó el whisbone y el GPIO, en donde se adicionaron los periféricos para después ser conectados al procesador y agregados a la libreria ``\textit{soc-hw.h}''. Enseguida, se crearon las funciones de los botones y motores en la carpeta \textit{rtl} del proyecto. Luego se adicionaron el \textit{makefile} del \textit{sack} y se procedió con la compilación de todos los archivos del proyecto. De tal forma que se podía llamar y enlazar al procesador. Finalmente, se realizó la prueba con los motores y los pulsadores de la FPGA, los cuales respondieron de manera adecuada a los comandos asignados.
+
+{\bf Nota: Se le explicó a todo el curso como hacer el enlace del hardware con el software. Explicación que duró 40 minutos aproximadamente.}
+
+\section{Conclusiones}
+\begin{itemize}
+\item Se logró realizar con éxito la comunicación entre el software y el hardware por medio del GPIO. Esto se demostró conectando los motores y controlándolos por medio de los pulsadores de la FPGA. Obteniendo así, los resultados esperados de acuerdo a las peticiones del laboratorio.
+\end{itemize}
+
+\bibliographystyle{ieeetran}
+\begin{thebibliography}{99}
+\bibitem{patterson} Patterson, David \& Hennessy John
+{\em "`Computer Organization And Design - The Hardware-Software Interface"'}.
+Kindle Edition, Fourth Edition, 2006.
+
+\bibitem{page1} \url{http://www.latticesemi.com/products/intellectualproperty/ipcores/mico32/index.cfm}
+
+\bibitem{page2} \url{http://www.linuxencaja.net/wiki/Arquitectura_LM32_JPRR_\%28261744\%29}
+\end{thebibliography}
+\end{document} 

@@ -1,0 +1,137 @@
+\documentclass[10pt,graphicx,caption,rotating]{article}
+\textheight=24cm
+\textwidth=18cm
+\topmargin=-2cm
+\oddsidemargin=0cm
+\usepackage[utf8x]{inputenc}
+\usepackage[activeacute,spanish]{babel}
+\usepackage{amssymb,amsfonts}
+\usepackage[tbtags]{amsmath}
+\usepackage{pict2e}
+\usepackage{float}
+\usepackage[all]{xy}
+\usepackage{graphics,graphicx,color,colortbl}
+\usepackage{times}
+\usepackage{subfigure}
+\usepackage{wrapfig}
+\usepackage{multicol}
+\usepackage{colortbl}
+\usepackage{cite}
+\usepackage{url}
+\usepackage[tbtags]{amsmath}
+\usepackage{amsmath,amssymb,amsfonts,amsbsy}
+\usepackage{bm}
+\usepackage[centerlast, small]{caption}
+\usepackage[colorlinks=true, citecolor=blue, linkcolor=blue, urlcolor=blue, breaklinks=true]{hyperref}
+
+\begin{document}
+\date{}
+{\centering \textbf{ \Large {UNIVERSIDAD NACIONAL DE COLOMBIA \\
+FACULTAD DE INGENIERÍA\[\]}}}
+\textbf{ \Large {PROGRAMA CURRICULAR DE INGENIERÍA ELECTRÓNICA}} \\ \\
+\textbf{ \Large {FORMATO PARA PRESENTACIÓN DE PROPUESTAS}}
+
+\section{PROPONENTES}
+\noindent
+José Alejandro Logreira Ávila Código: $261722$\\
+David Ricardo Martínez Hernández Código: $261931$\\
+Edwin Fernando Pineda Vargas Código: $262100$
+
+\section{TITULO}
+\noindent
+Brazo robótico multipropósito controlado por joystick.
+
+\section{ÁREA}
+\noindent
+Robótica.
+
+\section{LINEA DE INVESTIGACIÓN}
+% \noindent
+Electrónica digital II.
+
+\section{ANTECEDENTES Y JUSTIFICACIÓN}
+\noindent
+El uso de la tecnología para incentivar el desarrollo de la educación y diversión de las nuevas generaciones es reciente.\\\\
+Desde los años $70$´s, estos desarrollos se ha iniciado utilizando diversos componentes como la programación de computadoras, creación de modelos a escala, e inclusive simulando grandes retos de ingeniería o medicina, tales como construcciones, operaciones, simulación de vuelos, estrategias militares, dando así la oportunidad de una interacción directa entre los niños y la realidad de su entorno. Incentivando la creatividad y brindandoles la oportunidad a temprana edad, de encaminarse hacia una de las múltiples disciplinas que tenemos en la actualidad, mediante la toma de desiciones de manera semicontrolada, de tal forma, que se recrean ambientes reales o casi reales, en los cuales no se exponen a los niños. Logrando que a futuro, podamos contar con una nueva generación que solucione de manera más eficaz problemas de alta ingeniería o sociales, basándose en sus experiencias tempranas mediante el juego, para así corregir sus errores.\\
+Un gran número de expertos siguen la teoría de que los niños aprenden por medio de la creación de su propio conocimiento, asimilando los cambios que aparecen en su entorno y descubriendo continuamente cosas nuevas. Sobre esta base parece adecuado facilitar el uso de las nuevas tecnologías, que ayudarían a los niños a ir creando su propio saber al estimular o ayudar la capacidad de aprender.
+
+\section{FORMULACIÓN DEL PROBLEMA}
+\noindent
+Los jóvenes cada día están interactuando con el mundo de manera virtual y perdiendo su imaginación debido a este medio. Por tal razón se diseñará un brazo robótico multipropósito, para que lo utilicen solucionando problemas de su vida diaria.
+
+\section{OBJETIVOS}
+\subsection{General}
+\begin{itemize}
+ \item Brindar e incentivar en los niños el uso de la robótica para diversión y desarrollo de múltiples tareas a temprana edad. Es decir, a partir de los cinco años, clasificación $5 - 99$.
+\end{itemize}
+
+\subsection{Específicos}
+\begin{itemize}
+\item Implementar el protocolo USB para un joystick determinado.
+\item Diseñar e implementar el funcionamiento del brazo.
+\end{itemize}
+
+\section{ALCANCE DE LOS OBJETIVOS}
+\noindent
+\begin{itemize}
+ \item Generar un impacto en jóvenes para el desarrollo de herramientas robóticas y solución de problemas de la vida diario.
+ \item Incrementar el contacto físico entre los jóvenes y el mundo exterior. De tal forma que se incentive la creatividad para la implementación de herramientas de robótica para suplir sus necesidades.
+ \item Inducir a los jóvenes al desarrollo de aplicaciones de hardware.
+ \item Incentivar la creatividad de los jóvenes para desarrollar problemas de la vida diaria mediante la utilización de herramientas robóticas.
+\end{itemize}
+
+\section{METODOLOGÍA}
+\noindent
+En primera instancia se debe conocer el precio de los materiales a utilizar en el proyecto y corroborar su existencia, para así poder lograr una financiación por parte de los involucrados o interesados en el mismo. Posteriormente, se diseñará la arquitectura del brazo robótico, detallando la estructura y los direccionamientos de cada motor en la misma. Es decir, se establecerán los sentidos de giro para cada parte de la estructura. Luego, se caracterizarán los motores, estableciendo así, parámetros de torque, potencia, costo, etc. De tal forma que se tome la mejor desición para el ámbito económico, funcional y de diseño. Para este momento, también es necesario hacer una caracterización del joystick a implementar, ya que se utilizará una sola referencia de joystick, el cual, además está definido por el protocolo USB para su comunicación. Una vez logrado esto, se construirá físicamente el brazo, y se realizaran las aplicaciones y adaptaciones necesarias para su adecuado funcionamiento. Para poder así poder manejarlo mediante el joystick, de tal forma que el procesador en una de su principales funciones realice los movimientos adecuados de acuerdo a las órdenes recibidas por el joystick. En este punto, una ves se logre que el procesador realice perfectamente su labor, se diseñará e implementará la interfaz de usuario, de tal forma que todo este proceso logrado hasta ahora sea ameno para el mismo en su funcionamiento e interpretación. Para así lograr que el usuario entienda en cada instante que está pasando con el brazo y pueda llegado el caso tomar desiciones de carácter correctivo o preventivo. Finalmente se realizarán pruebas para verificar el perfecto funcionamiento del brazo y realizar correcciones de posibles fallas que se presenten de manera eventual.
+
+\section{SECUENCIA Y TIPO DE ACTIVIDADES QUE SE DESARROLLARÁN}
+\noindent
+\begin{enumerate}
+\item Cotización y compra de los motores y joysticks disponibles en el mercado.
+\item Diseño de la arquitectura del brazo robótico, detallando el sentido de giro de cada motor y de la estructura.
+\item Caracterización de los motores estableciendo parámetros de torque, potencia y costo.
+\item Caracterización del joystick mediante el protocolo USB.
+\item Construcción del brazo robótico en su estructura y mecánica, construyendo las adaptaciones necesarias para su adecuado funcionamiento.
+\item Implementación del joystick al brazo robótico para que sea interpretada por el procesador y esté realice su direccionamiento.
+\item Diseñar la interfaz de usuario para comprobar el correcto funcionamiento del brazo.
+\item Pruebas finales y correcciones del brazo robótico.
+\end{enumerate}
+
+\section{CRONOGRAMA}
+\noindent
+El tiempo que se fijó para realizar este proyecto se puede apreciar en el Cuadro \ref{tab1}.
+
+\begin{table}[H]
+	\centering
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}\hline
+\multicolumn{1}{|c|}{Tareas} & \multicolumn{14}{|c|}{Semanas} \\ \hline
+ & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 \\ \hline
+ Cotización y Compra & & \cellcolor{black} & \cellcolor{black} & & & & & & & & & & & \\ \hline
+ Diagrama del brazo & & \cellcolor{black} & \cellcolor{black} & & & & & & & & & & & \\ \hline
+ Caracterización & & & \cellcolor{black} & \cellcolor{black} & \cellcolor{black} & \cellcolor{black}  & & & & & & & & \\ \hline
+ Construcción & & & & \cellcolor{black} & \cellcolor{black} & \cellcolor{black} & & & & & & & & \\ \hline
+ Implementación del Joystick & & & & & & \cellcolor{black} & \cellcolor{black} & \cellcolor{black} & \cellcolor{black} & & & & & \\ \hline
+ Interfaz usuario & & & & & & & & \cellcolor{black} & \cellcolor{black} & & & & & \\ \hline
+ Pruebas y correcciones & & & & & & & & & \cellcolor{black} & \cellcolor{black} & & & & \\ \hline
+    \end{tabular}
+	\caption{Cronograma de actividades a seguir}
+	\label{tab1}
+\end{table}
+
+\section{NUMERO DE ESTUDIANTES}
+\noindent
+En este proyecto trabajaremos tres ($3$) estudiantes.
+  
+\begin{thebibliography}{99}
+\bibitem{harris} Harris, David \& Harris, Sarah.
+{\em "`Digital desing and computer architecture"'}.
+Pretince Hall, 2003.
+
+\bibitem{Katz} Katz J David
+{\em "`Embedded Media Processing"'}.
+Rick gentile Newnes cap [5]
+
+\bibitem{page1} \url{http://www.tendencias21.net/conocimiento/Las-Nuevas-Tecnologias-y-la-Infancia_a3.html}
+
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,5 @@
+# begin LFP file C:\Documents and Settings\USER\Escritorio\FINAL\GNRAL.lfp
+designfile GNRAL.v
+parttype xc3s200-5-ft256
+bus_delimiter 1;
+set_busdelim_onsave 1;
